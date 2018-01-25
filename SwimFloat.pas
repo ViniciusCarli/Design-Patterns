@@ -20,6 +20,5 @@ end;
 procedure TFloat.Swim;
 begin
   Writeln('He Floats');
-  Readln;
 end;
 end.

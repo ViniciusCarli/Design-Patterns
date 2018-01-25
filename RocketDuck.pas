@@ -3,7 +3,8 @@ unit RocketDuck;
 interface
 
 uses
-  System.SysUtils, DuckUtils, FlyUtils, SwimUtils, SwimFloat, FlyRocket;
+  System.SysUtils, DuckUtils, FlyUtils, SwimUtils, SwimFloat, FlyRocket,
+  QuackUtils, QuackQuack;
 
 type
   TRocketDuck = class(TDucktype)
@@ -15,6 +16,7 @@ implementation
 
 constructor TRocketDuck.Create;
 begin
+  FQuackBehavior := TQuackQuack.Create;
   FFlyBehavior := TRocket.Create;
   FSwimBehavior := TFloat.Create;
 end;

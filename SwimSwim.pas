@@ -20,7 +20,6 @@ end;
 procedure TSwimSwim.Swim;
 begin
   Writeln('He Swims');
-  Readln;
 end;
 end.
 

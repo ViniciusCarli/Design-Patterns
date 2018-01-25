@@ -7,7 +7,6 @@ uses
   System.SysUtils,
   DuckUtils in 'DuckUtils.pas',
   FlyUtils in 'FlyUtils.pas',
-  DisplayUtils in 'DisplayUtils.pas',
   SwimUtils in 'SwimUtils.pas',
   FlyWings in 'FlyWings.pas',
   FlyNoFly in 'FlyNoFly.pas',
@@ -18,7 +17,10 @@ uses
   RocketDuck in 'RocketDuck.pas',
   FlyRocket in 'FlyRocket.pas',
   PickleDuck in 'PickleDuck.pas',
-  FlyPickleMagic in 'FlyPickleMagic.pas';
+  FlyPickleMagic in 'FlyPickleMagic.pas',
+  QuackUtils in 'QuackUtils.pas',
+  QuackQuack in 'QuackQuack.pas',
+  QuackSqueak in 'QuackSqueak.pas';
 
 var
   RubberDuck : TDucktype;
@@ -36,18 +38,22 @@ begin
       Writeln('Royal Duck');
       RoyalDuck.Fly;
       RoyalDuck.Swim;
+      RoyalDuck.Quack;
 
       Writeln('Rubber Duck');
       RubberDuck.Fly;
       RubberDuck.Swim;
+      RubberDuck.Quack;
 
       Writeln('Rocket Duck');
       RocketDuck.Fly;
       RocketDuck.Swim;
+      RocketDuck.Quack;
 
       Writeln('Pickle Duck');
       PickleDuck.Fly;
       PickleDuck.Swim;
+      PickleDuck.Quack;
 
     except
       on E: Exception do

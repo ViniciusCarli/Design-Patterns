@@ -3,7 +3,8 @@ unit RoyalDuck;
 interface
 
 uses
-  System.SysUtils, DuckUtils, FlyWings, FlyUtils, SwimSwim, SwimUtils;
+  System.SysUtils, DuckUtils, FlyWings, FlyUtils, SwimSwim, SwimUtils,
+  QuackQuack, QuackUtils;
 
 type
   TRoyalDuck = class(TDucktype)
@@ -15,6 +16,7 @@ implementation
 
 constructor TRoyalDuck.Create;
 begin
+  FQuackBehavior := TQuackQuack.Create;
   FFlyBehavior := TWings.Create;
   FSwimBehavior := TSwimSwim.Create;
 end;
