@@ -7,19 +7,14 @@ uses
 type
   TSwimSwim = class(TInterfacedObject, TSwimBehavior)
   public
-    procedure Swim;
-    constructor Create;
+    function Swim: string;
   end;
 
 implementation
-constructor TSwimSwim.Create;
-begin
 
-end;
-
-procedure TSwimSwim.Swim;
+function TSwimSwim.Swim: string;
 begin
-  Writeln('He Swims');
+  Result := 'Normal Swim';
 end;
 end.
 

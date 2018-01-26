@@ -7,7 +7,7 @@ uses
 type
   TFloat = class(TInterfacedObject, TSwimBehavior)
   public
-    procedure Swim;
+    function Swim: string;
     constructor Create;
   end;
 
@@ -17,8 +17,8 @@ begin
 
 end;
 
-procedure TFloat.Swim;
+function TFloat.Swim: string;
 begin
-  Writeln('He Floats');
+  Result := 'He Floats';
 end;
 end.

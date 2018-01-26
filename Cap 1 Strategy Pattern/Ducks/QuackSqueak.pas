@@ -7,20 +7,14 @@ uses
 type
   TQuackSqueak = class(TInterfacedObject, TQuackBehavior)
   public
-    procedure Quack;
-    constructor Create;
+    function Quack: string;
   end;
 
 implementation
-constructor TQuackSqueak.Create;
-begin
 
-end;
-
-procedure TQuackSqueak.Quack;
+function TQuackSqueak.Quack: string;
 begin
-  Writeln('Squeak');
-  Readln;
+  Result := 'Squeak';
 end;
 end.
 

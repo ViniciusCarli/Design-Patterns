@@ -15,9 +15,7 @@ implementation
 
 function TRocket.fly: string;
 begin
-  Readln;
-  Writeln('Utilize Rockets');
-
+  Result := 'Utilize Rockets';
 end;
 
 end.

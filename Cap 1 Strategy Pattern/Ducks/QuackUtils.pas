@@ -4,7 +4,7 @@ interface
 
 type
   TQuackBehavior = interface
-  procedure Quack;
+  function Quack: string;
   end;
 
 implementation

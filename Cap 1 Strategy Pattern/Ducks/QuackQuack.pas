@@ -1,26 +1,21 @@
 unit QuackQuack;
 
 interface
+
 uses
   QuackUtils;
 
 type
   TQuackQuack = class(TInterfacedObject, TQuackBehavior)
   public
-    procedure Quack;
-    constructor Create;
+    function Quack: string;
   end;
 
 implementation
-constructor TQuackQuack.Create;
-begin
 
+function TQuackQuack.Quack: string;
+begin
+  Result := 'Quack';
 end;
 
-procedure TQuackQuack.Quack;
-begin
-  Writeln('Quack');
-  Readln;
-end;
 end.
-

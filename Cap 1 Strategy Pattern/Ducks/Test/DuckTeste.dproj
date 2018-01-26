@@ -40,6 +40,7 @@
         <Base>true</Base>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base)'!=''">
+        <SanitizedProjectName>DuckTeste</SanitizedProjectName>
         <VerInfo_Locale>1046</VerInfo_Locale>
         <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
         <DCC_UnitSearchPath>$(BDS)\Source\DUnit\src;..\;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
@@ -88,6 +89,11 @@
         </DelphiCompile>
         <DCCReference Include="..\RoyalDuck.pas"/>
         <DCCReference Include="TestRoyalDuck.pas"/>
+        <DCCReference Include="TestPickleDuck.pas"/>
+        <DCCReference Include="TestRubberDuck.pas"/>
+        <DCCReference Include="..\RubberDuck.pas"/>
+        <DCCReference Include="TestRocketDuck.pas"/>
+        <DCCReference Include="..\RocketDuck.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
@@ -471,6 +477,7 @@
                 <TestFramework>DUnit / Delphi Win32</TestFramework>
                 <TestRunner>GUI</TestRunner>
                 <SourceProjectName>C:\Users\Vinicius Bustamanti\Desktop\Design-Patterns\Cap 1 Strategy Pattern\Ducks\Project1.dproj</SourceProjectName>
+                <TestProjectName/>
             </UnitTesting>
         </BorlandProject>
         <ProjectFileVersion>12</ProjectFileVersion>

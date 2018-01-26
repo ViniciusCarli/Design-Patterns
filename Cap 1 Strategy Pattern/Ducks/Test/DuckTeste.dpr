@@ -17,7 +17,12 @@ program DuckTeste;
 uses
   DUnitTestRunner,
   RoyalDuck in '..\RoyalDuck.pas',
-  TestRoyalDuck in 'TestRoyalDuck.pas';
+  TestRoyalDuck in 'TestRoyalDuck.pas',
+  TestPickleDuck in 'TestPickleDuck.pas',
+  TestRubberDuck in 'TestRubberDuck.pas',
+  RubberDuck in '..\RubberDuck.pas',
+  TestRocketDuck in 'TestRocketDuck.pas',
+  RocketDuck in '..\RocketDuck.pas';
 
 {$R *.RES}
 

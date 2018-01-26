@@ -4,7 +4,7 @@ interface
 
 type
   TSwimBehavior = interface
-  procedure Swim;
+  function Swim: string;
   end;
 
 implementation

@@ -19,8 +19,7 @@ end;
 
 function TNoFly.fly: string;
 begin
-  Readln;
-  Writeln('Do not Fly');
+  Result:= 'Do not Fly';
 end;
 
 end.

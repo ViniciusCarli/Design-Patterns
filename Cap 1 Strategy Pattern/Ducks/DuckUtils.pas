@@ -11,46 +11,28 @@ type
     FFlyBehavior : IFlyBehavior;
     FSwimBehavior : TSwimBehavior;
     FQuackBehavior : TQuackBehavior;
-    procedure Swim;
+    function Swim: string;
     function Fly: string;
-    procedure Quack;
-    constructor CreateSwim(SwimBehavior : TSwimBehavior);
-    constructor CreateFly(FlyBehavior : IFlyBehavior);
-    constructor CreateQuack(QuackBehavior : TQuackBehavior);
+    function Quack: string;
 end;
 
 implementation
 
 { TDucktype }
 
-constructor TDucktype.CreateFly(FlyBehavior: IFlyBehavior);
-begin
-  Self.FFlyBehavior := FlyBehavior;
-end;
-
-constructor TDucktype.CreateQuack(QuackBehavior: TQuackBehavior);
-begin
-  Self.FQuackBehavior := QuackBehavior;
-end;
-
-constructor TDucktype.CreateSwim(SwimBehavior: TSwimBehavior);
-begin
-  Self.FSwimBehavior := SwimBehavior;
-end;
-
 function TDucktype.Fly: string;
 begin
-  FFlyBehavior.Fly;
+  Result := FFlyBehavior.Fly;
 end;
 
-procedure TDucktype.Quack;
+function TDucktype.Quack: string;
 begin
-  FQuackBehavior.Quack;
+  Result := FQuackBehavior.Quack;
 end;
 
-procedure TDucktype.Swim;
+function TDucktype.Swim: string;
 begin
-  FswimBehavior.Swim
+  Result := FswimBehavior.Swim
 end;
 
 end.

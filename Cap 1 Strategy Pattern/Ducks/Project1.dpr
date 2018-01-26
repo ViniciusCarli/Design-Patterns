@@ -36,25 +36,32 @@ begin
   try
     try
       Writeln('Royal Duck');
-      Writeln(RoyalDuck.FFlyBehavior.fly);
-      RoyalDuck.Swim;
-      RoyalDuck.Quack;
+      Writeln(RoyalDuck.fly);
+      Writeln(RoyalDuck.swim);
+      Writeln(RoyalDuck.Quack);
+
+      Readln;
 
       Writeln('Rubber Duck');
-      RubberDuck.Fly;
-      RubberDuck.Swim;
-      RubberDuck.Quack;
+      Writeln(RubberDuck.Fly);
+      Writeln(RubberDuck.Swim);
+      Writeln(RubberDuck.Quack);
+
+      Readln;
 
       Writeln('Rocket Duck');
-      RocketDuck.Fly;
-      RocketDuck.Swim;
-      RocketDuck.Quack;
+      Writeln(RocketDuck.Fly);
+      Writeln(RocketDuck.Swim);
+      Writeln(RocketDuck.Quack);
+
+      Readln;
 
       Writeln('Pickle Duck');
-      WriteLN(PickleDuck.FFlyBehavior.fly);
-      PickleDuck.Swim;
-      PickleDuck.Quack;
+      Writeln(PickleDuck.Fly);
+      Writeln(PickleDuck.Swim);
+      Writeln(PickleDuck.Quack);
 
+      Readln;
     except
       on E: Exception do
         Writeln(E.ClassName, ': ', E.Message);

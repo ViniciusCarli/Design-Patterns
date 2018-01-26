@@ -17,6 +17,8 @@ type
   published
     procedure TestTypeDuckPickle;
     procedure TestFlyDuckPickle;
+    procedure TestQuackDuckPickle;
+    procedure TestSwimDuckPickle;
 
   end;
 
@@ -28,6 +30,18 @@ procedure TestTPickleDuck.TestFlyDuckPickle;
 begin
   FPickleDuck := TPickleDuck.Create;
   CheckEqualsString('Fly Pickle Magic', FPickleMagic.fly);
+end;
+
+procedure TestTPickleDuck.TestQuackDuckPickle;
+begin
+  FPickleDuck := TPickleDuck.Create;
+  CheckEqualsString('Quack',FPickleDuck.Quack);
+end;
+
+procedure TestTPickleDuck.TestSwimDuckPickle;
+begin
+  FPickleDuck := TPickleDuck.Create;
+  CheckEqualsString('Normal Swim',FPickleDuck.Swim);
 end;
 
 procedure TestTPickleDuck.TestTypeDuckPickle;
