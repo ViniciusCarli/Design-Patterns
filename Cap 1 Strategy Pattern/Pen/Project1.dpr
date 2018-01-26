@@ -17,11 +17,14 @@ uses
   BicPenBlack in 'BicPenBlack.pas';
 
 var
+  KopagPen : TPentype;
   PremiumPen : TPentype;
   BicPenBlue : TPentype;
   BicPenBlack : TPentype;
 
 begin
+  KopagPen := TPentype.Create(TBlackPaint.Create,TStellShell.Create);
+//  CustomPen :=TPentype.Create(TBluePaint.Create,TPlasticShell.Create);
   PremiumPen := TPremiumPen.Create;
   BicPenBlue := TBicPenBlue.Create;
   BicPenBlack := TBicPenBlack.Create;
@@ -42,12 +45,20 @@ begin
       BicPenBlack.Paint;
       BicPenBlack.Shell;
 
+      Writeln('KopagPen');
+      Writeln('');
+      KopagPen.Paint;
+      KopagPen.Shell;
+
     except
       on E: Exception do
         Writeln(E.ClassName, ': ', E.Message);
     end;
   finally
-    PremiumPen.Free;
+//    PremiumPen.Free;
+//    BicPenBlue.Free;
+//    BicPenBlack.Free;
+//    KopagPen.Free;
   end;
 
 end.

@@ -6,8 +6,6 @@ program Project1;
 uses
   System.SysUtils,
   DuckUtils in 'DuckUtils.pas',
-  FlyUtils in 'FlyUtils.pas',
-  SwimUtils in 'SwimUtils.pas',
   FlyWings in 'FlyWings.pas',
   FlyNoFly in 'FlyNoFly.pas',
   RubberDuck in 'RubberDuck.pas',
@@ -20,7 +18,9 @@ uses
   FlyPickleMagic in 'FlyPickleMagic.pas',
   QuackUtils in 'QuackUtils.pas',
   QuackQuack in 'QuackQuack.pas',
-  QuackSqueak in 'QuackSqueak.pas';
+  QuackSqueak in 'QuackSqueak.pas',
+  FlyUtils in 'FlyUtils.pas',
+  SwimUtils in 'SwimUtils.pas';
 
 var
   RubberDuck : TDucktype;
@@ -36,7 +36,7 @@ begin
   try
     try
       Writeln('Royal Duck');
-      RoyalDuck.Fly;
+      Writeln(RoyalDuck.FFlyBehavior.fly);
       RoyalDuck.Swim;
       RoyalDuck.Quack;
 
@@ -51,7 +51,7 @@ begin
       RocketDuck.Quack;
 
       Writeln('Pickle Duck');
-      PickleDuck.Fly;
+      WriteLN(PickleDuck.FFlyBehavior.fly);
       PickleDuck.Swim;
       PickleDuck.Quack;
 

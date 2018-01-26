@@ -6,18 +6,16 @@ uses
   FlyUtils;
 
 type
-  TPickleMagic = class(TInterfacedObject, TFlyBehavior)
+  TPickleMagic = class(TInterfacedObject, IFlyBehavior)
   public
-    procedure fly;
+    function fly: string;
   end;
 
 implementation
 
-procedure TPickleMagic.fly;
+function TPickleMagic.fly: string;
 begin
-  Readln;
-  Writeln('Utilize Pickle Magic');
-
+  Result := 'Fly Pickle Magic';
 end;
 
 end.

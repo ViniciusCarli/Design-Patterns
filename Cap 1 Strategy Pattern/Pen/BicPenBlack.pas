@@ -8,7 +8,7 @@ uses
 type
   TBicPenBlack = class(TPentype)
     public
-      constructor Create;
+      constructor Create;overload;
   end;
 
 implementation

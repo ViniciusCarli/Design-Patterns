@@ -3,12 +3,12 @@ unit SteelShell;
 interface
 
 uses
-  ShellUtils;
+  ShellUtils, System.SysUtils;
 
 type
   TStellShell = class(TInterfacedObject, TShellBehavior)
   public
-    procedure Shell;
+    function Shell:string;
     constructor Create;
   end;
 
@@ -21,10 +21,9 @@ begin
 
 end;
 
-procedure TStellShell.Shell;
+function TStellShell.Shell:string;
 begin
-  Writeln('Steel Shell');
-  Readln;
+  Result := 'A';
 end;
 
 end.

@@ -8,7 +8,7 @@ uses
 type
   TPremiumPen = class(TPentype)
     public
-      constructor Create;
+      constructor Create;overload;
   end;
 
 implementation
