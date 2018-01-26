@@ -3,8 +3,8 @@ unit FlyUtils;
 interface
 
 type
-  TFlyBehavior = interface
-  procedure fly;
+  IFlyBehavior = interface
+    function fly: string;
   end;
 
 implementation

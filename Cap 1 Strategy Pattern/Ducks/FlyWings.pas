@@ -3,21 +3,19 @@ unit FlyWings;
 interface
 
 uses
-  FlyUtils;
+  FlyUtils, System.SysUtils;
 
 type
-  TWings = class(TInterfacedObject, TFlyBehavior)
+  TWings = class(TInterfacedObject, IFlyBehavior)
   public
-    procedure fly;
+    function fly: string;
   end;
 
 implementation
 
-procedure TWings.fly;
+function TWings.fly: string;
 begin
-  Readln;
-  Writeln('Utilize Wings');
-
+  Result := 'FlyWings';
 end;
 
 end.

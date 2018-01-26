@@ -1,14 +1,14 @@
 ﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
-        <ProjectGuid>{A99BB04F-4B25-414B-94FB-2C31297F9902}</ProjectGuid>
+        <ProjectGuid>{AA526647-C5C1-42FE-9EEE-65C74F2E9609}</ProjectGuid>
         <ProjectVersion>16.1</ProjectVersion>
         <FrameworkType>None</FrameworkType>
-        <MainSource>Project1.dpr</MainSource>
         <Base>True</Base>
         <Config Condition="'$(Config)'==''">Debug</Config>
         <Platform Condition="'$(Platform)'==''">Win32</Platform>
         <TargetedPlatforms>1</TargetedPlatforms>
         <AppType>Console</AppType>
+        <MainSource>DuckTeste.dpr</MainSource>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
         <Base>true</Base>
@@ -40,9 +40,13 @@
         <Base>true</Base>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base)'!=''">
-        <DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;$(DCC_Namespace)</DCC_Namespace>
-        <SanitizedProjectName>Project1</SanitizedProjectName>
-        <DCC_DcuOutput>.\$(Platform)\$(Config)</DCC_DcuOutput>
+        <VerInfo_Locale>1046</VerInfo_Locale>
+        <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+        <DCC_UnitSearchPath>$(BDS)\Source\DUnit\src;..\;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+        <DCC_Define>_CONSOLE_TESTRUNNER;$(DCC_Define)</DCC_Define>
+        <DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;$(DCC_Namespace)</DCC_Namespace>
+        <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+        <DCC_DcuOutput>.</DCC_DcuOutput>
         <DCC_ExeOutput>.\$(Platform)\$(Config)</DCC_ExeOutput>
         <DCC_E>false</DCC_E>
         <DCC_N>false</DCC_N>
@@ -51,15 +55,13 @@
         <DCC_K>false</DCC_K>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
-        <DCC_ConsoleTarget>true</DCC_ConsoleTarget>
+        <VerInfo_Locale>1033</VerInfo_Locale>
         <DCC_UsePackage>dxThemeRS21;dxPScxSchedulerLnkRS21;cxSchedulerRibbonStyleEventEditorRS21;FireDACSqliteDriver;cxSchedulerRS21;FireDACDSDriver;dxDBXServerModeRS21;DBXSqliteDriver;FireDACPgDriver;dxRichEditControlRS21;dxSkinsdxDLPainterRS21;fmx;cxVerticalGridRS21;IndySystem;frxe21;dxSpreadSheetRS21;tethering;cxTreeListdxBarPopupMenuRS21;cxPivotGridRS21;DBXInterBaseDriver;DataSnapClient;DataSnapServer;DataSnapCommon;frx21;dxHttpIndyRequestRS21;dxPScxPivotGridLnkRS21;dxSpreadSheetReportDesignerRS21;DataSnapProviderClient;dxPSPrVwRibbonRS21;DBXSybaseASEDriver;cxEditorsRS21;DbxCommonDriver;dxGaugeControlRS21;vclimg;cxGridRS21;dxPsPrVwAdvRS21;dbxcds;dxPDFViewerRS21;DatasnapConnectorsFreePascal;MetropolisUILiveTile;dxPSdxGaugeControlLnkRS21;cxPivotGridOLAPRS21;dxTileControlRS21;vcldb;vcldsnap;cxTreeListRS21;dxSpellCheckerRS21;fmxFireDAC;dxdborRS21;DBXDb2Driver;frxDBX21;dxOfficeCoreRS21;dxWizardControlRS21;dxBarExtItemsRS21;DBXOracleDriver;CustomIPTransport;vclribbon;dxtrmdRS21;dsnap;IndyIPServer;fmxase;vcl;IndyCore;dxSkinsdxBarPainterRS21;dxGDIPlusRS21;DBXMSSQLDriver;IndyIPCommon;CloudService;dxBarExtDBItemsRS21;FireDACIBDriver;frxADO21;DataSnapFireDAC;FireDACDBXDriver;dxPSRichEditControlLnkRS21;dxPSdxSpreadSheetLnkRS21;soapserver;dxDockingRS21;dxdbtrRS21;inetdbxpress;dxLayoutControlRS21;dsnapxml;FireDACInfxDriver;FireDACDb2Driver;dxPScxGridLnkRS21;dxPSdxFCLnkRS21;dxSkinscxSchedulerPainterRS21;adortl;dxPSLnksRS21;dxPSdxDBOCLnkRS21;FireDACASADriver;fsADO21;cxLibraryRS21;dxPSdxMapControlLnkRS21;bindcompfmx;dxPSdxPDFViewerLnkRS21;cxDataRS21;dxComnRS21;FireDACODBCDriver;RESTBackendComponents;emsclientfiredac;dxTabbedMDIRS21;rtl;dbrtl;DbxClientDriver;dxPSdxOCLnkRS21;FireDACCommon;bindcomp;inetdb;dxorgcRS21;dxPScxExtCommonRS21;dxPScxTLLnkRS21;dxPSdxLCLnkRS21;DbxDevartPostgreSQLDriver210;DBXOdbcDriver;frxDB21;vclFireDAC;dxMapControlRS21;xmlrtl;DataSnapNativeClient;svnui;cxExportRS21;IndyProtocols;DBXMySQLDriver;cxPivotGridChartRS21;FireDACCommonDriver;dxRichEditControlCoreRS21;bindengine;vclactnband;bindcompdbx;soaprtl;fsDB21;dxFlowChartRS21;bindcompvcl;fs21;dxCoreRS21;cxPageControlRS21;vclie;dxmdsRS21;cxSchedulerTreeBrowserRS21;FireDACADSDriver;vcltouch;dxPSCoreRS21;dxSpreadSheetConditionalFormattingDialogsRS21;dxSkinscxPCPainterRS21;dxServerModeRS21;emsclient;dxPScxCommonRS21;dxPSdxDBTVLnkRS21;dxSkinsdxRibbonPainterRS21;VCLRESTComponents;FireDACMSSQLDriver;FireDAC;VclSmp;DBXInformixDriver;dxRibbonCustomizationFormRS21;dxBarDBNavRS21;DataSnapConnectors;dxADOServerModeRS21;DataSnapServerMidas;dsnapcon;DBXFirebirdDriver;dxNavBarRS21;inet;dxRibbonRS21;fmxobj;dxSkinsdxNavBarPainterRS21;cxSchedulerGridRS21;FireDACMySQLDriver;soapmidas;vclx;dxPScxVGridLnkRS21;svn;DBXSybaseASADriver;dxBarRS21;FireDACOracleDriver;fmxdae;RESTComponents;dxSkinsCoreRS21;dxFireDACServerModeRS21;FireDACMSAccDriver;dbexpress;DataSnapIndy10ServerTransport;IndyIPClient;$(DCC_UsePackage)</DCC_UsePackage>
         <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
-        <VerInfo_Locale>1033</VerInfo_Locale>
         <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win64)'!=''">
         <DCC_UsePackage>dxThemeRS21;dxPScxSchedulerLnkRS21;cxSchedulerRibbonStyleEventEditorRS21;FireDACSqliteDriver;cxSchedulerRS21;FireDACDSDriver;dxDBXServerModeRS21;DBXSqliteDriver;FireDACPgDriver;dxRichEditControlRS21;dxSkinsdxDLPainterRS21;fmx;cxVerticalGridRS21;IndySystem;dxSpreadSheetRS21;tethering;cxTreeListdxBarPopupMenuRS21;cxPivotGridRS21;DBXInterBaseDriver;DataSnapClient;DataSnapServer;DataSnapCommon;dxHttpIndyRequestRS21;dxPScxPivotGridLnkRS21;dxSpreadSheetReportDesignerRS21;DataSnapProviderClient;dxPSPrVwRibbonRS21;DBXSybaseASEDriver;cxEditorsRS21;DbxCommonDriver;dxGaugeControlRS21;vclimg;cxGridRS21;dxPsPrVwAdvRS21;dbxcds;dxPDFViewerRS21;DatasnapConnectorsFreePascal;MetropolisUILiveTile;dxPSdxGaugeControlLnkRS21;cxPivotGridOLAPRS21;dxTileControlRS21;vcldb;vcldsnap;cxTreeListRS21;dxSpellCheckerRS21;fmxFireDAC;dxdborRS21;DBXDb2Driver;dxOfficeCoreRS21;dxWizardControlRS21;dxBarExtItemsRS21;DBXOracleDriver;CustomIPTransport;vclribbon;dxtrmdRS21;dsnap;IndyIPServer;fmxase;vcl;IndyCore;dxSkinsdxBarPainterRS21;dxGDIPlusRS21;DBXMSSQLDriver;IndyIPCommon;CloudService;dxBarExtDBItemsRS21;FireDACIBDriver;DataSnapFireDAC;FireDACDBXDriver;dxPSRichEditControlLnkRS21;dxPSdxSpreadSheetLnkRS21;soapserver;dxDockingRS21;dxdbtrRS21;inetdbxpress;dxLayoutControlRS21;dsnapxml;FireDACInfxDriver;FireDACDb2Driver;dxPScxGridLnkRS21;dxPSdxFCLnkRS21;dxSkinscxSchedulerPainterRS21;adortl;dxPSLnksRS21;dxPSdxDBOCLnkRS21;FireDACASADriver;cxLibraryRS21;dxPSdxMapControlLnkRS21;bindcompfmx;dxPSdxPDFViewerLnkRS21;cxDataRS21;dxComnRS21;FireDACODBCDriver;RESTBackendComponents;emsclientfiredac;dxTabbedMDIRS21;rtl;dbrtl;DbxClientDriver;dxPSdxOCLnkRS21;FireDACCommon;bindcomp;inetdb;dxorgcRS21;dxPScxExtCommonRS21;dxPScxTLLnkRS21;dxPSdxLCLnkRS21;DBXOdbcDriver;vclFireDAC;dxMapControlRS21;xmlrtl;DataSnapNativeClient;cxExportRS21;IndyProtocols;DBXMySQLDriver;cxPivotGridChartRS21;FireDACCommonDriver;dxRichEditControlCoreRS21;bindengine;vclactnband;bindcompdbx;soaprtl;dxFlowChartRS21;bindcompvcl;dxCoreRS21;cxPageControlRS21;vclie;dxmdsRS21;cxSchedulerTreeBrowserRS21;FireDACADSDriver;vcltouch;dxPSCoreRS21;dxSpreadSheetConditionalFormattingDialogsRS21;dxSkinscxPCPainterRS21;dxServerModeRS21;emsclient;dxPScxCommonRS21;dxPSdxDBTVLnkRS21;dxSkinsdxRibbonPainterRS21;VCLRESTComponents;FireDACMSSQLDriver;FireDAC;VclSmp;DBXInformixDriver;dxRibbonCustomizationFormRS21;dxBarDBNavRS21;DataSnapConnectors;dxADOServerModeRS21;DataSnapServerMidas;dsnapcon;DBXFirebirdDriver;dxNavBarRS21;inet;dxRibbonRS21;fmxobj;dxSkinsdxNavBarPainterRS21;cxSchedulerGridRS21;FireDACMySQLDriver;soapmidas;vclx;dxPScxVGridLnkRS21;DBXSybaseASADriver;dxBarRS21;FireDACOracleDriver;fmxdae;RESTComponents;dxSkinsCoreRS21;dxFireDACServerModeRS21;FireDACMSAccDriver;dbexpress;DataSnapIndy10ServerTransport;IndyIPClient;$(DCC_UsePackage)</DCC_UsePackage>
-        <DCC_ConsoleTarget>true</DCC_ConsoleTarget>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1)'!=''">
         <DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
@@ -84,22 +86,8 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="DuckUtils.pas"/>
-        <DCCReference Include="FlyWings.pas"/>
-        <DCCReference Include="FlyNoFly.pas"/>
-        <DCCReference Include="RubberDuck.pas"/>
-        <DCCReference Include="RoyalDuck.pas"/>
-        <DCCReference Include="SwimFloat.pas"/>
-        <DCCReference Include="SwimSwim.pas"/>
-        <DCCReference Include="RocketDuck.pas"/>
-        <DCCReference Include="FlyRocket.pas"/>
-        <DCCReference Include="PickleDuck.pas"/>
-        <DCCReference Include="FlyPickleMagic.pas"/>
-        <DCCReference Include="QuackUtils.pas"/>
-        <DCCReference Include="QuackQuack.pas"/>
-        <DCCReference Include="QuackSqueak.pas"/>
-        <DCCReference Include="FlyUtils.pas"/>
-        <DCCReference Include="SwimUtils.pas"/>
+        <DCCReference Include="..\RoyalDuck.pas"/>
+        <DCCReference Include="TestRoyalDuck.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
@@ -117,9 +105,6 @@
         <Borland.ProjectType>Application</Borland.ProjectType>
         <BorlandProject>
             <Delphi.Personality>
-                <Source>
-                    <Source Name="MainSource">Project1.dpr</Source>
-                </Source>
                 <Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\dcloffice2k210.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\dclofficexp210.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
@@ -128,19 +113,22 @@
                     <Excluded_Packages Name="C:\Program Files (x86)\FastReport 5 VCL Professional\LibD21\dclfrxIBX21.bpl">FastReport 5.0 IBX Components</Excluded_Packages>
                     <Excluded_Packages Name="C:\Program Files (x86)\FastReport 5 VCL Professional\LibD21\dclfsIBX21.bpl">FastScript 1.9 IBX Components</Excluded_Packages>
                 </Excluded_Packages>
+                <Source>
+                    <Source Name="MainSource">DuckTeste.dpr</Source>
+                </Source>
             </Delphi.Personality>
             <Deployment>
+                <DeployFile LocalName="Win32\Debug\DuckTeste.exe" Configuration="Debug" Class="ProjectOutput">
+                    <Platform Name="Win32">
+                        <RemoteName>DuckTeste.exe</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
                 <DeployFile LocalName="$(BDS)\Redist\osx32\libcgunwind.1.0.dylib" Class="DependencyModule">
                     <Platform Name="OSX32">
                         <Overwrite>true</Overwrite>
                     </Platform>
                     <Platform Name="iOSSimulator">
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="Win32\Debug\Project1.exe" Configuration="Debug" Class="ProjectOutput">
-                    <Platform Name="Win32">
-                        <RemoteName>Project1.exe</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
@@ -480,7 +468,9 @@
                 <Platform value="Win64">False</Platform>
             </Platforms>
             <UnitTesting>
-                <TestProjectName>C:\Users\Vinicius Bustamanti\Desktop\Design-Patterns\Cap 1 Strategy Pattern\Ducks\Test\DuckTeste.dproj</TestProjectName>
+                <TestFramework>DUnit / Delphi Win32</TestFramework>
+                <TestRunner>GUI</TestRunner>
+                <SourceProjectName>C:\Users\Vinicius Bustamanti\Desktop\Design-Patterns\Cap 1 Strategy Pattern\Ducks\Project1.dproj</SourceProjectName>
             </UnitTesting>
         </BorlandProject>
         <ProjectFileVersion>12</ProjectFileVersion>

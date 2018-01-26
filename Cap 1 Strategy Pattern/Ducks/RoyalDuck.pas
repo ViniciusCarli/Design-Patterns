@@ -10,6 +10,7 @@ type
   TRoyalDuck = class(TDucktype)
   public
     constructor Create;
+    function fly :String;
   end;
 
 implementation
@@ -19,6 +20,11 @@ begin
   FQuackBehavior := TQuackQuack.Create;
   FFlyBehavior := TWings.Create;
   FSwimBehavior := TSwimSwim.Create;
+end;
+
+function TRoyalDuck.fly: String;
+begin
+  Result := FFlyBehavior.fly;
 end;
 
 end.

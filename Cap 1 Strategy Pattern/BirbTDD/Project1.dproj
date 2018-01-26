@@ -1,6 +1,6 @@
 ﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
-        <ProjectGuid>{A99BB04F-4B25-414B-94FB-2C31297F9902}</ProjectGuid>
+        <ProjectGuid>{7EC0DEC7-BDE5-4BBE-B60D-BE451820BBF2}</ProjectGuid>
         <ProjectVersion>16.1</ProjectVersion>
         <FrameworkType>None</FrameworkType>
         <MainSource>Project1.dpr</MainSource>
@@ -11,6 +11,11 @@
         <AppType>Console</AppType>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Android' and '$(Base)'=='true') or '$(Base_Android)'!=''">
+        <Base_Android>true</Base_Android>
+        <CfgParent>Base</CfgParent>
         <Base>true</Base>
     </PropertyGroup>
     <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Base)'=='true') or '$(Base_Win32)'!=''">
@@ -50,16 +55,27 @@
         <DCC_F>false</DCC_F>
         <DCC_K>false</DCC_K>
     </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Android)'!=''">
+        <Android_LauncherIcon72>$(BDS)\bin\Artwork\Android\FM_LauncherIcon_72x72.png</Android_LauncherIcon72>
+        <Android_SplashImage470>$(BDS)\bin\Artwork\Android\FM_SplashImage_470x320.png</Android_SplashImage470>
+        <Android_LauncherIcon48>$(BDS)\bin\Artwork\Android\FM_LauncherIcon_48x48.png</Android_LauncherIcon48>
+        <Android_SplashImage640>$(BDS)\bin\Artwork\Android\FM_SplashImage_640x480.png</Android_SplashImage640>
+        <Android_LauncherIcon36>$(BDS)\bin\Artwork\Android\FM_LauncherIcon_36x36.png</Android_LauncherIcon36>
+        <Android_LauncherIcon96>$(BDS)\bin\Artwork\Android\FM_LauncherIcon_96x96.png</Android_LauncherIcon96>
+        <Android_LauncherIcon144>$(BDS)\bin\Artwork\Android\FM_LauncherIcon_144x144.png</Android_LauncherIcon144>
+        <Android_SplashImage426>$(BDS)\bin\Artwork\Android\FM_SplashImage_426x320.png</Android_SplashImage426>
+        <Android_SplashImage960>$(BDS)\bin\Artwork\Android\FM_SplashImage_960x720.png</Android_SplashImage960>
+    </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
         <DCC_ConsoleTarget>true</DCC_ConsoleTarget>
-        <DCC_UsePackage>dxThemeRS21;dxPScxSchedulerLnkRS21;cxSchedulerRibbonStyleEventEditorRS21;FireDACSqliteDriver;cxSchedulerRS21;FireDACDSDriver;dxDBXServerModeRS21;DBXSqliteDriver;FireDACPgDriver;dxRichEditControlRS21;dxSkinsdxDLPainterRS21;fmx;cxVerticalGridRS21;IndySystem;frxe21;dxSpreadSheetRS21;tethering;cxTreeListdxBarPopupMenuRS21;cxPivotGridRS21;DBXInterBaseDriver;DataSnapClient;DataSnapServer;DataSnapCommon;frx21;dxHttpIndyRequestRS21;dxPScxPivotGridLnkRS21;dxSpreadSheetReportDesignerRS21;DataSnapProviderClient;dxPSPrVwRibbonRS21;DBXSybaseASEDriver;cxEditorsRS21;DbxCommonDriver;dxGaugeControlRS21;vclimg;cxGridRS21;dxPsPrVwAdvRS21;dbxcds;dxPDFViewerRS21;DatasnapConnectorsFreePascal;MetropolisUILiveTile;dxPSdxGaugeControlLnkRS21;cxPivotGridOLAPRS21;dxTileControlRS21;vcldb;vcldsnap;cxTreeListRS21;dxSpellCheckerRS21;fmxFireDAC;dxdborRS21;DBXDb2Driver;frxDBX21;dxOfficeCoreRS21;dxWizardControlRS21;dxBarExtItemsRS21;DBXOracleDriver;CustomIPTransport;vclribbon;dxtrmdRS21;dsnap;IndyIPServer;fmxase;vcl;IndyCore;dxSkinsdxBarPainterRS21;dxGDIPlusRS21;DBXMSSQLDriver;IndyIPCommon;CloudService;dxBarExtDBItemsRS21;FireDACIBDriver;frxADO21;DataSnapFireDAC;FireDACDBXDriver;dxPSRichEditControlLnkRS21;dxPSdxSpreadSheetLnkRS21;soapserver;dxDockingRS21;dxdbtrRS21;inetdbxpress;dxLayoutControlRS21;dsnapxml;FireDACInfxDriver;FireDACDb2Driver;dxPScxGridLnkRS21;dxPSdxFCLnkRS21;dxSkinscxSchedulerPainterRS21;adortl;dxPSLnksRS21;dxPSdxDBOCLnkRS21;FireDACASADriver;fsADO21;cxLibraryRS21;dxPSdxMapControlLnkRS21;bindcompfmx;dxPSdxPDFViewerLnkRS21;cxDataRS21;dxComnRS21;FireDACODBCDriver;RESTBackendComponents;emsclientfiredac;dxTabbedMDIRS21;rtl;dbrtl;DbxClientDriver;dxPSdxOCLnkRS21;FireDACCommon;bindcomp;inetdb;dxorgcRS21;dxPScxExtCommonRS21;dxPScxTLLnkRS21;dxPSdxLCLnkRS21;DbxDevartPostgreSQLDriver210;DBXOdbcDriver;frxDB21;vclFireDAC;dxMapControlRS21;xmlrtl;DataSnapNativeClient;svnui;cxExportRS21;IndyProtocols;DBXMySQLDriver;cxPivotGridChartRS21;FireDACCommonDriver;dxRichEditControlCoreRS21;bindengine;vclactnband;bindcompdbx;soaprtl;fsDB21;dxFlowChartRS21;bindcompvcl;fs21;dxCoreRS21;cxPageControlRS21;vclie;dxmdsRS21;cxSchedulerTreeBrowserRS21;FireDACADSDriver;vcltouch;dxPSCoreRS21;dxSpreadSheetConditionalFormattingDialogsRS21;dxSkinscxPCPainterRS21;dxServerModeRS21;emsclient;dxPScxCommonRS21;dxPSdxDBTVLnkRS21;dxSkinsdxRibbonPainterRS21;VCLRESTComponents;FireDACMSSQLDriver;FireDAC;VclSmp;DBXInformixDriver;dxRibbonCustomizationFormRS21;dxBarDBNavRS21;DataSnapConnectors;dxADOServerModeRS21;DataSnapServerMidas;dsnapcon;DBXFirebirdDriver;dxNavBarRS21;inet;dxRibbonRS21;fmxobj;dxSkinsdxNavBarPainterRS21;cxSchedulerGridRS21;FireDACMySQLDriver;soapmidas;vclx;dxPScxVGridLnkRS21;svn;DBXSybaseASADriver;dxBarRS21;FireDACOracleDriver;fmxdae;RESTComponents;dxSkinsCoreRS21;dxFireDACServerModeRS21;FireDACMSAccDriver;dbexpress;DataSnapIndy10ServerTransport;IndyIPClient;$(DCC_UsePackage)</DCC_UsePackage>
         <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
+        <DCC_UsePackage>dxThemeRS21;dxPScxSchedulerLnkRS21;cxSchedulerRibbonStyleEventEditorRS21;FireDACSqliteDriver;cxSchedulerRS21;FireDACDSDriver;dxDBXServerModeRS21;DBXSqliteDriver;FireDACPgDriver;dxRichEditControlRS21;dxSkinsdxDLPainterRS21;fmx;cxVerticalGridRS21;IndySystem;frxe21;dxSpreadSheetRS21;tethering;cxTreeListdxBarPopupMenuRS21;cxPivotGridRS21;DBXInterBaseDriver;DataSnapClient;DataSnapServer;DataSnapCommon;frx21;dxHttpIndyRequestRS21;dxPScxPivotGridLnkRS21;dxSpreadSheetReportDesignerRS21;DataSnapProviderClient;dxPSPrVwRibbonRS21;DBXSybaseASEDriver;cxEditorsRS21;DbxCommonDriver;dxGaugeControlRS21;vclimg;cxGridRS21;dxPsPrVwAdvRS21;dbxcds;dxPDFViewerRS21;DatasnapConnectorsFreePascal;MetropolisUILiveTile;dxPSdxGaugeControlLnkRS21;cxPivotGridOLAPRS21;dxTileControlRS21;vcldb;vcldsnap;cxTreeListRS21;dxSpellCheckerRS21;fmxFireDAC;dxdborRS21;DBXDb2Driver;frxDBX21;dxOfficeCoreRS21;dxWizardControlRS21;dxBarExtItemsRS21;DBXOracleDriver;CustomIPTransport;vclribbon;dxtrmdRS21;dsnap;IndyIPServer;fmxase;vcl;IndyCore;dxSkinsdxBarPainterRS21;dxGDIPlusRS21;DBXMSSQLDriver;IndyIPCommon;CloudService;dxBarExtDBItemsRS21;FireDACIBDriver;frxADO21;DataSnapFireDAC;FireDACDBXDriver;dxPSRichEditControlLnkRS21;dxPSdxSpreadSheetLnkRS21;soapserver;dxDockingRS21;dxdbtrRS21;inetdbxpress;dxLayoutControlRS21;dsnapxml;FireDACInfxDriver;FireDACDb2Driver;dxPScxGridLnkRS21;dxPSdxFCLnkRS21;dxSkinscxSchedulerPainterRS21;adortl;dxPSLnksRS21;dxPSdxDBOCLnkRS21;FireDACASADriver;fsADO21;cxLibraryRS21;dxPSdxMapControlLnkRS21;bindcompfmx;dxPSdxPDFViewerLnkRS21;cxDataRS21;dxComnRS21;FireDACODBCDriver;RESTBackendComponents;emsclientfiredac;dxTabbedMDIRS21;rtl;dbrtl;DbxClientDriver;dxPSdxOCLnkRS21;FireDACCommon;bindcomp;inetdb;dxorgcRS21;dxPScxExtCommonRS21;dxPScxTLLnkRS21;dxPSdxLCLnkRS21;DbxDevartPostgreSQLDriver210;DBXOdbcDriver;frxDB21;vclFireDAC;dxMapControlRS21;xmlrtl;DataSnapNativeClient;svnui;cxExportRS21;IndyProtocols;DBXMySQLDriver;cxPivotGridChartRS21;FireDACCommonDriver;dxRichEditControlCoreRS21;bindengine;vclactnband;bindcompdbx;soaprtl;fsDB21;dxFlowChartRS21;bindcompvcl;fs21;dxCoreRS21;cxPageControlRS21;vclie;dxmdsRS21;cxSchedulerTreeBrowserRS21;FireDACADSDriver;vcltouch;dxPSCoreRS21;dxSpreadSheetConditionalFormattingDialogsRS21;dxSkinscxPCPainterRS21;dxServerModeRS21;emsclient;dxPScxCommonRS21;dxPSdxDBTVLnkRS21;dxSkinsdxRibbonPainterRS21;VCLRESTComponents;FireDACMSSQLDriver;FireDAC;VclSmp;DBXInformixDriver;dxRibbonCustomizationFormRS21;dxBarDBNavRS21;DataSnapConnectors;dxADOServerModeRS21;DataSnapServerMidas;dsnapcon;DBXFirebirdDriver;dxNavBarRS21;inet;dxRibbonRS21;fmxobj;dxSkinsdxNavBarPainterRS21;cxSchedulerGridRS21;FireDACMySQLDriver;soapmidas;vclx;dxPScxVGridLnkRS21;svn;DBXSybaseASADriver;dxBarRS21;FireDACOracleDriver;fmxdae;RESTComponents;dxSkinsCoreRS21;dxFireDACServerModeRS21;FireDACMSAccDriver;dbexpress;DataSnapIndy10ServerTransport;IndyIPClient;$(DCC_UsePackage)</DCC_UsePackage>
         <VerInfo_Locale>1033</VerInfo_Locale>
         <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win64)'!=''">
-        <DCC_UsePackage>dxThemeRS21;dxPScxSchedulerLnkRS21;cxSchedulerRibbonStyleEventEditorRS21;FireDACSqliteDriver;cxSchedulerRS21;FireDACDSDriver;dxDBXServerModeRS21;DBXSqliteDriver;FireDACPgDriver;dxRichEditControlRS21;dxSkinsdxDLPainterRS21;fmx;cxVerticalGridRS21;IndySystem;dxSpreadSheetRS21;tethering;cxTreeListdxBarPopupMenuRS21;cxPivotGridRS21;DBXInterBaseDriver;DataSnapClient;DataSnapServer;DataSnapCommon;dxHttpIndyRequestRS21;dxPScxPivotGridLnkRS21;dxSpreadSheetReportDesignerRS21;DataSnapProviderClient;dxPSPrVwRibbonRS21;DBXSybaseASEDriver;cxEditorsRS21;DbxCommonDriver;dxGaugeControlRS21;vclimg;cxGridRS21;dxPsPrVwAdvRS21;dbxcds;dxPDFViewerRS21;DatasnapConnectorsFreePascal;MetropolisUILiveTile;dxPSdxGaugeControlLnkRS21;cxPivotGridOLAPRS21;dxTileControlRS21;vcldb;vcldsnap;cxTreeListRS21;dxSpellCheckerRS21;fmxFireDAC;dxdborRS21;DBXDb2Driver;dxOfficeCoreRS21;dxWizardControlRS21;dxBarExtItemsRS21;DBXOracleDriver;CustomIPTransport;vclribbon;dxtrmdRS21;dsnap;IndyIPServer;fmxase;vcl;IndyCore;dxSkinsdxBarPainterRS21;dxGDIPlusRS21;DBXMSSQLDriver;IndyIPCommon;CloudService;dxBarExtDBItemsRS21;FireDACIBDriver;DataSnapFireDAC;FireDACDBXDriver;dxPSRichEditControlLnkRS21;dxPSdxSpreadSheetLnkRS21;soapserver;dxDockingRS21;dxdbtrRS21;inetdbxpress;dxLayoutControlRS21;dsnapxml;FireDACInfxDriver;FireDACDb2Driver;dxPScxGridLnkRS21;dxPSdxFCLnkRS21;dxSkinscxSchedulerPainterRS21;adortl;dxPSLnksRS21;dxPSdxDBOCLnkRS21;FireDACASADriver;cxLibraryRS21;dxPSdxMapControlLnkRS21;bindcompfmx;dxPSdxPDFViewerLnkRS21;cxDataRS21;dxComnRS21;FireDACODBCDriver;RESTBackendComponents;emsclientfiredac;dxTabbedMDIRS21;rtl;dbrtl;DbxClientDriver;dxPSdxOCLnkRS21;FireDACCommon;bindcomp;inetdb;dxorgcRS21;dxPScxExtCommonRS21;dxPScxTLLnkRS21;dxPSdxLCLnkRS21;DBXOdbcDriver;vclFireDAC;dxMapControlRS21;xmlrtl;DataSnapNativeClient;cxExportRS21;IndyProtocols;DBXMySQLDriver;cxPivotGridChartRS21;FireDACCommonDriver;dxRichEditControlCoreRS21;bindengine;vclactnband;bindcompdbx;soaprtl;dxFlowChartRS21;bindcompvcl;dxCoreRS21;cxPageControlRS21;vclie;dxmdsRS21;cxSchedulerTreeBrowserRS21;FireDACADSDriver;vcltouch;dxPSCoreRS21;dxSpreadSheetConditionalFormattingDialogsRS21;dxSkinscxPCPainterRS21;dxServerModeRS21;emsclient;dxPScxCommonRS21;dxPSdxDBTVLnkRS21;dxSkinsdxRibbonPainterRS21;VCLRESTComponents;FireDACMSSQLDriver;FireDAC;VclSmp;DBXInformixDriver;dxRibbonCustomizationFormRS21;dxBarDBNavRS21;DataSnapConnectors;dxADOServerModeRS21;DataSnapServerMidas;dsnapcon;DBXFirebirdDriver;dxNavBarRS21;inet;dxRibbonRS21;fmxobj;dxSkinsdxNavBarPainterRS21;cxSchedulerGridRS21;FireDACMySQLDriver;soapmidas;vclx;dxPScxVGridLnkRS21;DBXSybaseASADriver;dxBarRS21;FireDACOracleDriver;fmxdae;RESTComponents;dxSkinsCoreRS21;dxFireDACServerModeRS21;FireDACMSAccDriver;dbexpress;DataSnapIndy10ServerTransport;IndyIPClient;$(DCC_UsePackage)</DCC_UsePackage>
         <DCC_ConsoleTarget>true</DCC_ConsoleTarget>
+        <DCC_UsePackage>dxThemeRS21;dxPScxSchedulerLnkRS21;cxSchedulerRibbonStyleEventEditorRS21;FireDACSqliteDriver;cxSchedulerRS21;FireDACDSDriver;dxDBXServerModeRS21;DBXSqliteDriver;FireDACPgDriver;dxRichEditControlRS21;dxSkinsdxDLPainterRS21;fmx;cxVerticalGridRS21;IndySystem;dxSpreadSheetRS21;tethering;cxTreeListdxBarPopupMenuRS21;cxPivotGridRS21;DBXInterBaseDriver;DataSnapClient;DataSnapServer;DataSnapCommon;dxHttpIndyRequestRS21;dxPScxPivotGridLnkRS21;dxSpreadSheetReportDesignerRS21;DataSnapProviderClient;dxPSPrVwRibbonRS21;DBXSybaseASEDriver;cxEditorsRS21;DbxCommonDriver;dxGaugeControlRS21;vclimg;cxGridRS21;dxPsPrVwAdvRS21;dbxcds;dxPDFViewerRS21;DatasnapConnectorsFreePascal;MetropolisUILiveTile;dxPSdxGaugeControlLnkRS21;cxPivotGridOLAPRS21;dxTileControlRS21;vcldb;vcldsnap;cxTreeListRS21;dxSpellCheckerRS21;fmxFireDAC;dxdborRS21;DBXDb2Driver;dxOfficeCoreRS21;dxWizardControlRS21;dxBarExtItemsRS21;DBXOracleDriver;CustomIPTransport;vclribbon;dxtrmdRS21;dsnap;IndyIPServer;fmxase;vcl;IndyCore;dxSkinsdxBarPainterRS21;dxGDIPlusRS21;DBXMSSQLDriver;IndyIPCommon;CloudService;dxBarExtDBItemsRS21;FireDACIBDriver;DataSnapFireDAC;FireDACDBXDriver;dxPSRichEditControlLnkRS21;dxPSdxSpreadSheetLnkRS21;soapserver;dxDockingRS21;dxdbtrRS21;inetdbxpress;dxLayoutControlRS21;dsnapxml;FireDACInfxDriver;FireDACDb2Driver;dxPScxGridLnkRS21;dxPSdxFCLnkRS21;dxSkinscxSchedulerPainterRS21;adortl;dxPSLnksRS21;dxPSdxDBOCLnkRS21;FireDACASADriver;cxLibraryRS21;dxPSdxMapControlLnkRS21;bindcompfmx;dxPSdxPDFViewerLnkRS21;cxDataRS21;dxComnRS21;FireDACODBCDriver;RESTBackendComponents;emsclientfiredac;dxTabbedMDIRS21;rtl;dbrtl;DbxClientDriver;dxPSdxOCLnkRS21;FireDACCommon;bindcomp;inetdb;dxorgcRS21;dxPScxExtCommonRS21;dxPScxTLLnkRS21;dxPSdxLCLnkRS21;DBXOdbcDriver;vclFireDAC;dxMapControlRS21;xmlrtl;DataSnapNativeClient;cxExportRS21;IndyProtocols;DBXMySQLDriver;cxPivotGridChartRS21;FireDACCommonDriver;dxRichEditControlCoreRS21;bindengine;vclactnband;bindcompdbx;soaprtl;dxFlowChartRS21;bindcompvcl;dxCoreRS21;cxPageControlRS21;vclie;dxmdsRS21;cxSchedulerTreeBrowserRS21;FireDACADSDriver;vcltouch;dxPSCoreRS21;dxSpreadSheetConditionalFormattingDialogsRS21;dxSkinscxPCPainterRS21;dxServerModeRS21;emsclient;dxPScxCommonRS21;dxPSdxDBTVLnkRS21;dxSkinsdxRibbonPainterRS21;VCLRESTComponents;FireDACMSSQLDriver;FireDAC;VclSmp;DBXInformixDriver;dxRibbonCustomizationFormRS21;dxBarDBNavRS21;DataSnapConnectors;dxADOServerModeRS21;DataSnapServerMidas;dsnapcon;DBXFirebirdDriver;dxNavBarRS21;inet;dxRibbonRS21;fmxobj;dxSkinsdxNavBarPainterRS21;cxSchedulerGridRS21;FireDACMySQLDriver;soapmidas;vclx;dxPScxVGridLnkRS21;DBXSybaseASADriver;dxBarRS21;FireDACOracleDriver;fmxdae;RESTComponents;dxSkinsCoreRS21;dxFireDACServerModeRS21;FireDACMSAccDriver;dbexpress;DataSnapIndy10ServerTransport;IndyIPClient;$(DCC_UsePackage)</DCC_UsePackage>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1)'!=''">
         <DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
@@ -70,8 +86,6 @@
         <DCC_RemoteDebug>true</DCC_RemoteDebug>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
-        <VerInfo_Locale>1033</VerInfo_Locale>
-        <Manifest_File>None</Manifest_File>
         <DCC_RemoteDebug>false</DCC_RemoteDebug>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2)'!=''">
@@ -84,22 +98,10 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="DuckUtils.pas"/>
-        <DCCReference Include="FlyWings.pas"/>
-        <DCCReference Include="FlyNoFly.pas"/>
-        <DCCReference Include="RubberDuck.pas"/>
-        <DCCReference Include="RoyalDuck.pas"/>
-        <DCCReference Include="SwimFloat.pas"/>
-        <DCCReference Include="SwimSwim.pas"/>
-        <DCCReference Include="RocketDuck.pas"/>
-        <DCCReference Include="FlyRocket.pas"/>
-        <DCCReference Include="PickleDuck.pas"/>
-        <DCCReference Include="FlyPickleMagic.pas"/>
-        <DCCReference Include="QuackUtils.pas"/>
-        <DCCReference Include="QuackQuack.pas"/>
-        <DCCReference Include="QuackSqueak.pas"/>
-        <DCCReference Include="FlyUtils.pas"/>
-        <DCCReference Include="SwimUtils.pas"/>
+        <DCCReference Include="Birbs.pas"/>
+        <DCCReference Include="ColorBehavior.pas"/>
+        <DCCReference Include="BeakBehavior.pas"/>
+        <DCCReference Include="RadBirb.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
@@ -120,14 +122,6 @@
                 <Source>
                     <Source Name="MainSource">Project1.dpr</Source>
                 </Source>
-                <Excluded_Packages>
-                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k210.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
-                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp210.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Program Files (x86)\FastReport 5 VCL Professional\LibD21\dclfrxTee21.bpl">(untitled)</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Program Files (x86)\FastReport 5 VCL Professional\LibD21\dclfsTee21.bpl">FastScript 1.9 Tee Components</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Program Files (x86)\FastReport 5 VCL Professional\LibD21\dclfrxIBX21.bpl">FastReport 5.0 IBX Components</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Program Files (x86)\FastReport 5 VCL Professional\LibD21\dclfsIBX21.bpl">FastScript 1.9 IBX Components</Excluded_Packages>
-                </Excluded_Packages>
             </Delphi.Personality>
             <Deployment>
                 <DeployFile LocalName="$(BDS)\Redist\osx32\libcgunwind.1.0.dylib" Class="DependencyModule">
@@ -476,11 +470,12 @@
                 <ProjectRoot Platform="Win64" Name="$(PROJECTNAME)"/>
             </Deployment>
             <Platforms>
+                <Platform value="Android">False</Platform>
                 <Platform value="Win32">True</Platform>
                 <Platform value="Win64">False</Platform>
             </Platforms>
             <UnitTesting>
-                <TestProjectName>C:\Users\Vinicius Bustamanti\Desktop\Design-Patterns\Cap 1 Strategy Pattern\Ducks\Test\DuckTeste.dproj</TestProjectName>
+                <TestProjectName>C:\Users\Vinicius Bustamanti\Desktop\Design-Patterns\Cap 1 Strategy Pattern\BirbTDD\Test\Project1Tests.dproj</TestProjectName>
             </UnitTesting>
         </BorlandProject>
         <ProjectFileVersion>12</ProjectFileVersion>

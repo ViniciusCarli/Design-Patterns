@@ -8,14 +8,14 @@ uses
 type
   TDucktype = class
   public
-    FFlyBehavior : TFlyBehavior;
+    FFlyBehavior : IFlyBehavior;
     FSwimBehavior : TSwimBehavior;
     FQuackBehavior : TQuackBehavior;
     procedure Swim;
-    procedure Fly;
+    function Fly: string;
     procedure Quack;
     constructor CreateSwim(SwimBehavior : TSwimBehavior);
-    constructor CreateFly(FlyBehavior : TFlyBehavior);
+    constructor CreateFly(FlyBehavior : IFlyBehavior);
     constructor CreateQuack(QuackBehavior : TQuackBehavior);
 end;
 
@@ -23,7 +23,7 @@ implementation
 
 { TDucktype }
 
-constructor TDucktype.CreateFly(FlyBehavior: TFlyBehavior);
+constructor TDucktype.CreateFly(FlyBehavior: IFlyBehavior);
 begin
   Self.FFlyBehavior := FlyBehavior;
 end;
@@ -38,7 +38,7 @@ begin
   Self.FSwimBehavior := SwimBehavior;
 end;
 
-procedure TDucktype.Fly;
+function TDucktype.Fly: string;
 begin
   FFlyBehavior.Fly;
 end;

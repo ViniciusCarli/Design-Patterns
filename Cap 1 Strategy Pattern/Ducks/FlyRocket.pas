@@ -6,14 +6,14 @@ uses
   FlyUtils;
 
 type
-  TRocket = class(TInterfacedObject, TFlyBehavior)
+  TRocket = class(TInterfacedObject, IFlyBehavior)
   public
-    procedure fly;
+    function fly: string;
   end;
 
 implementation
 
-procedure TRocket.fly;
+function TRocket.fly: string;
 begin
   Readln;
   Writeln('Utilize Rockets');

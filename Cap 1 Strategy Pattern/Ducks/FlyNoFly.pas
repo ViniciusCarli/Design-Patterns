@@ -5,9 +5,9 @@ uses
   FlyUtils;
 
 type
-  TNoFly = class(TInterfacedObject, TFlyBehavior)
+  TNoFly = class(TInterfacedObject, IFlyBehavior)
   public
-    procedure fly;
+    function fly: string;
     constructor Create;
   end;
 
@@ -17,7 +17,7 @@ begin
 
 end;
 
-procedure TNoFly.Fly;
+function TNoFly.fly: string;
 begin
   Readln;
   Writeln('Do not Fly');

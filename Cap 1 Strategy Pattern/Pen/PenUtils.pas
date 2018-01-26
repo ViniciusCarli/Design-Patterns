@@ -14,23 +14,20 @@ type
     procedure Paint;
     procedure Shell;
 
-    constructor CreatePaint(PaintBehavior : TPaintBehavior);
-    constructor CreateShell(ShellBehavior : TShellBehavior);
+    constructor Create(PaintBehavior :TPaintBehavior;ShellBehavior : TShellBehavior); reintroduce;
   end;
 
 implementation
 
 { TPentype }
 
-constructor TPentype.CreatePaint(PaintBehavior: TPaintBehavior);
+constructor TPentype.Create(PaintBehavior: TPaintBehavior;
+  ShellBehavior: TShellBehavior);
 begin
   Self.FPaintBehavior := PaintBehavior;
-end;
-
-constructor TPentype.CreateShell(ShellBehavior: TShellBehavior);
-begin
   Self.FShellBehavior := ShellBehavior;
 end;
+
 
 procedure TPentype.Paint;
 begin
