@@ -5,7 +5,7 @@ interface
 uses
   TestFramework, System.SysUtils, SwimUtils, QuackQuack, FlyUtils, SwimSwim,
   DuckUtils,
-  FlyPickleMagic, PickleDuck, QuackUtils;
+  FlyPickleMagic, PickleDuck, QuackUtils, RoyalDuck;
 
 type
 
@@ -16,6 +16,7 @@ type
     FPickleMagic : TPickleMagic;
   published
     procedure TestTypeDuckPickle;
+    procedure TestTypeInvalido;
     procedure TestFlyDuckPickle;
     procedure TestQuackDuckPickle;
     procedure TestSwimDuckPickle;
@@ -50,6 +51,12 @@ begin
   CheckEquals(FPickleDuck.ClassType, TPickleDuck);
 end;
 
+
+procedure TestTPickleDuck.TestTypeInvalido;
+begin
+  FPickleDuck := TPickleDuck.Create;
+  CheckEquals (FPickleDuck.ClassType,TRoyalDuck);
+end;
 
 initialization
   RegisterTest(TestTPickleDuck.Suite);

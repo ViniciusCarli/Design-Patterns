@@ -23,10 +23,10 @@ uses
   SwimUtils in 'SwimUtils.pas';
 
 var
-  RubberDuck : TDucktype;
-  RoyalDuck  : TDucktype;
-  RocketDuck : TDucktype;
-  PickleDuck : TDucktype;
+  RubberDuck: TDucktype;
+  RoyalDuck: TDucktype;
+  RocketDuck: TDucktype;
+  PickleDuck: TDucktype;
 
 begin
   RubberDuck := TRubberDuck.Create;
@@ -43,22 +43,22 @@ begin
       Readln;
 
       Writeln('Rubber Duck');
-      Writeln(RubberDuck.Fly);
-      Writeln(RubberDuck.Swim);
+      Writeln(RubberDuck.fly);
+      Writeln(RubberDuck.swim);
       Writeln(RubberDuck.Quack);
 
       Readln;
 
       Writeln('Rocket Duck');
-      Writeln(RocketDuck.Fly);
-      Writeln(RocketDuck.Swim);
+      Writeln(RocketDuck.fly);
+      Writeln(RocketDuck.swim);
       Writeln(RocketDuck.Quack);
 
       Readln;
 
       Writeln('Pickle Duck');
-      Writeln(PickleDuck.Fly);
-      Writeln(PickleDuck.Swim);
+      Writeln(PickleDuck.fly);
+      Writeln(PickleDuck.swim);
       Writeln(PickleDuck.Quack);
 
       Readln;
