@@ -2,8 +2,8 @@ program Project1;
 
 uses
   Vcl.Forms,
-  Display in 'Display.pas' {Form1},
-  ConcreteSubject in 'ConcreteSubject.pas',
+  Principal in 'Principal.pas' {Form1},
+  WeatherCentral in 'WeatherCentral.pas',
   Observer in 'Observer.pas',
   Subject in 'Subject.pas',
   ConcreteObserver in 'ConcreteObserver.pas',
@@ -12,7 +12,7 @@ uses
 {$R *.res}
 
 begin
-  Application.Initialize;x
+  Application.Initialize;
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TForm1, Form1);
   Application.CreateForm(TDataModule1, DataModule1);
