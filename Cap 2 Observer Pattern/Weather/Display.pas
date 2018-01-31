@@ -41,7 +41,6 @@ begin
   FHumidity := Hum;
   FPressure := Press;
   Display;
-
 end;
 
 end.

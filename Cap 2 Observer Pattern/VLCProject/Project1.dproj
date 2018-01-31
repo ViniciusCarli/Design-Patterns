@@ -83,11 +83,11 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="Display.pas">
+        <DCCReference Include="Principal.pas">
             <Form>Form1</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="ConcreteSubject.pas"/>
+        <DCCReference Include="WeatherCentral.pas"/>
         <DCCReference Include="Observer.pas"/>
         <DCCReference Include="Subject.pas"/>
         <DCCReference Include="ConcreteObserver.pas"/>
