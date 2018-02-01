@@ -20,7 +20,6 @@ type
     procedure TestFlyDuckPickle;
     procedure TestQuackDuckPickle;
     procedure TestSwimDuckPickle;
-
   end;
 
 implementation
@@ -50,7 +49,6 @@ begin
   FPickleDuck := TPickleDuck.Create;
   CheckEquals(FPickleDuck.ClassType, TPickleDuck);
 end;
-
 
 procedure TestTPickleDuck.TestTypeInvalido;
 begin
