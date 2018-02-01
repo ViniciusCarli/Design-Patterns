@@ -33,7 +33,6 @@ begin
   FTemperature := Temp;
   FHumidity := Hum;
   FPressure := Press;
-
 end;
 
 end.

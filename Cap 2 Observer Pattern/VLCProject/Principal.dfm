@@ -2,8 +2,8 @@ object Form1: TForm1
   Left = 0
   Top = 0
   Caption = 'Form1'
-  ClientHeight = 172
-  ClientWidth = 480
+  ClientHeight = 234
+  ClientWidth = 463
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -35,17 +35,31 @@ object Form1: TForm1
     Caption = 'Pressure'
   end
   object Label4: TLabel
-    Left = 353
-    Top = 8
+    Left = 295
+    Top = 50
     Width = 54
     Height = 13
     Caption = 'Heat Index'
   end
+  object Log: TLabel
+    Left = 8
+    Top = 98
+    Width = 54
+    Height = 13
+    Caption = 'ChangeLog'
+  end
+  object Label5: TLabel
+    Left = 8
+    Top = 50
+    Width = 64
+    Height = 13
+    Caption = 'Actual Status'
+  end
   object Memo1: TMemo
     Left = 8
-    Top = 63
-    Width = 464
-    Height = 105
+    Top = 117
+    Width = 305
+    Height = 109
     TabOrder = 0
   end
   object EditTemp: TEdit
@@ -70,7 +84,7 @@ object Form1: TForm1
     TabOrder = 3
   end
   object Button1: TButton
-    Left = 272
+    Left = 381
     Top = 23
     Width = 75
     Height = 21
@@ -79,12 +93,21 @@ object Form1: TForm1
     OnClick = Button1Click
   end
   object EdtHeatIndex: TEdit
-    Left = 353
-    Top = 23
-    Width = 119
+    Left = 295
+    Top = 69
+    Width = 99
     Height = 21
     NumbersOnly = True
     ReadOnly = True
     TabOrder = 5
+  end
+  object Edit1: TEdit
+    Left = 8
+    Top = 69
+    Width = 281
+    Height = 21
+    NumbersOnly = True
+    ReadOnly = True
+    TabOrder = 6
   end
 end
