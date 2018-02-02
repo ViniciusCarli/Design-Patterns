@@ -4,7 +4,6 @@ interface
 
 uses
   TestFramework, ConcreteObserver, Subject, WeatherCentral, System.SysUtils, Observer;
-
 type
 
   TestTConcreteObserver = class(TTestCase)
@@ -17,18 +16,8 @@ type
 
 implementation
 
-//procedure TestTConcreteObserver.SetUp;
-//begin
-//  FConcreteObserver := TConcreteObserver.Create;
-//end;
-
-//procedure TestTConcreteObserver.TearDown;
-//begin
-//  FConcreteObserver.Free;
-//  FConcreteObserver := nil;
-//end;
-
 initialization
   RegisterTest(TestTConcreteObserver.Suite);
 end.
+
 

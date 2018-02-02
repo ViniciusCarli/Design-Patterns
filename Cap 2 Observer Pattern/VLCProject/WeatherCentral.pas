@@ -15,8 +15,8 @@ type
     FPressure : double;
     constructor Create;
     destructor Destroy(Observer: IObserver);
-    function HeatIndex :double;
-    procedure RegisterObserver(Observer: IObserver);
+    function HeatIndex(FTemp, FHumi: double) :double;
+    function RegisterObserver(Observer: IObserver): Integer;
     procedure RemoveObserver(Observer: IObserver);
     procedure NotifyObserver;
     procedure SetMeasurements(Temp, Hum, Press: double);
@@ -42,15 +42,14 @@ begin
   FObservers.Free;
 end;
 
-function TWeatherCentral.HeatIndex :double;
+function TWeatherCentral.HeatIndex(FTemp, FHumi: double): double;
 begin
-  Result := (-42.379 + 2.04901523 * FTemperature + 10.14333127 * FHumidity -0.22475541 *
-  FTemperature * FHumidity -0.00683783 * FTemperature * FTemperature
-  -0.05481717 * FHumidity * FHumidity + 0.00122874 * FTemperature * FTemperature
-  * FHumidity + 0.00085282 * FTemperature * FTemperature * FTemperature -0.00000199 * FTemperature
-  * FTemperature * FTemperature * FTemperature);
+  NHeatIndex := (-42.379 + 2.04901523 * FTemp + 10.14333127 * FHumi - 0.22475541
+    * FTemp * FHumi - 0.00683783 * FTemp * FTemp - 0.05481717 * FHumi * FHumi +
+    0.00122874 * FTemp * FTemp * FHumi + 0.00085282 * FTemp * FTemp * FTemp -
+    0.00000199 * FTemp * FTemp * FTemp * FTemp);
 
-  NHeatIndex := Result;
+  Result := NHeatIndex;
 end;
 
 procedure TWeatherCentral.NotifyObserver;
@@ -61,14 +60,15 @@ begin
     ObserverCount.Update(FTemperature, FHumidity, FPressure);
 end;
 
-procedure TWeatherCentral.RegisterObserver(Observer: IObserver);
+function TWeatherCentral.RegisterObserver(Observer: IObserver): Integer;
 begin
   FObservers.Add(Observer);
 end;
 
 procedure TWeatherCentral.RemoveObserver(Observer: IObserver);
 begin
-  FObservers.Delete(FObservers.IndexOf(Observer));
+  for Observer in FObservers do
+    FObservers.Delete(FObservers.IndexOf(Observer));
 end;
 
 procedure TWeatherCentral.SetMeasurements(Temp, Hum, Press: double);
@@ -77,7 +77,7 @@ begin
   FHumidity := Hum;
   FPressure := Press;
   ChangeMeasurements;
-  HeatIndex;
+  HeatIndex(FTemperature, FHumidity);
 end;
 
 end.

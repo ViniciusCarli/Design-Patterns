@@ -7,7 +7,7 @@ uses
 
 type
   ISubject = interface
-    procedure RegisterObserver(Observer : IObserver);
+    function RegisterObserver(Observer : IObserver): Integer;
     procedure RemoveObserver(Observer : IObserver);
     procedure NotifyObserver;
   end;

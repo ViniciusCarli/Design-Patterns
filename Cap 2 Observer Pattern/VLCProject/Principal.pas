@@ -46,7 +46,7 @@ implementation
 procedure TForm1.AdicionarDados;
 begin
   Data := TWeatherCentral.Create;
-  ConcreteObserver := TConcreteObserver.Create(Data);
+  ConcreteObserver := TConcreteObserver.Create;
   ObserverTeste := TObserverTeste2.Create;
 
   Data.SetMeasurements(StrToFloat(EditTemp.Text), StrToFloat(EditHum.Text),

@@ -1,5 +1,12 @@
 [ExpressSkins]
+<<<<<<< HEAD
+Default=1
+ShowNotifications=1
+Enabled=1
+dxSkinsDefaultPainters=1
+=======
 Default=0
 ShowNotifications=0
 Enabled=0
 dxSkinsDefaultPainters=0
+>>>>>>> 145d9af007349c356eb2a745a243148ebba53bbb
