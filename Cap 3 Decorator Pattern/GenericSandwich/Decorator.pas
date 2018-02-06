@@ -7,12 +7,12 @@ uses
 
 type
   TDecorator = class(TInterfacedObject, ISanduiche)
-    protected
-      Sanduiche : ISanduiche;
-      function ObterPreco : double; virtual;
-      function ObterDados : string; virtual;
-    public
-      constructor Create(Sanduiche : ISanduiche);
+  protected
+    Sanduiche: ISanduiche;
+    function ObterPreco: double; virtual;
+    function ObterDados: string; virtual;
+  public
+    constructor Create(Sanduiche: ISanduiche);
   end;
 
 implementation

@@ -8,7 +8,7 @@ uses
 type
   TQueijoDecorator = class(TDecorator)
   protected
-    function ObterPreco : double; override;
+    function ObterPreco: double; override;
     function ObterDados: string; override;
   end;
 

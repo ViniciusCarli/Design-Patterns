@@ -4,7 +4,7 @@ interface
 
 type
   ISanduiche = interface
-    function ObterPreco : double;
+    function ObterPreco: double;
     function ObterDados: string;
   end;
 

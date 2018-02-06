@@ -6,9 +6,9 @@ uses
   Component, System.SysUtils;
 
 type
-  TSanduiche = class(TInterfacedObject, ISanduiche)
+  TPaoPadrao = class(TInterfacedObject, ISanduiche)
   private
-    function ObterPreco : double;
+    function ObterPreco: double;
     function ObterDados: string;
   end;
 
@@ -16,15 +16,14 @@ implementation
 
 { TSanduiche }
 
-
-function TSanduiche.ObterDados: string;
+function TPaoPadrao.ObterDados: string;
 begin
-  Result := 'Pão Padrão';
+  Result := 'Pão de Hamburger';
 end;
 
-function TSanduiche.ObterPreco: double;
+function TPaoPadrao.ObterPreco: double;
 begin
-  Result :=  3;
+  Result := 3;
 end;
 
 end.

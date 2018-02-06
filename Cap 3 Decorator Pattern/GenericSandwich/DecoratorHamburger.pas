@@ -1,4 +1,4 @@
-unit DecoratorOnion;
+unit DecoratorHamburger;
 
 interface
 
@@ -6,7 +6,7 @@ uses
   Decorator;
 
 type
-  TOnionDecorator = class(TDecorator)
+  THamburgerDecorator = class(TDecorator)
   protected
     function ObterPreco: double; override;
     function ObterDados: string; override;
@@ -16,16 +16,16 @@ implementation
 
 { TBaconDecorator }
 
-function TOnionDecorator.ObterDados: string;
+function THamburgerDecorator.ObterDados: string;
 begin
   Result := inherited ObterDados;
-  Result := Result + ', Onion Rings';
+  Result := Result + ', Hamburger';
 end;
 
-function TOnionDecorator.ObterPreco: double;
+function THamburgerDecorator.ObterPreco: double;
 begin
   Result := inherited ObterPreco;
-  Result := Result + 2;
+  Result := Result + 3;
 end;
 
 end.

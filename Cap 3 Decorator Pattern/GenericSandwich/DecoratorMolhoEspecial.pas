@@ -1,4 +1,4 @@
-unit DecoratorOnion;
+unit DecoratorMolhoEspecial;
 
 interface
 
@@ -6,7 +6,7 @@ uses
   Decorator;
 
 type
-  TOnionDecorator = class(TDecorator)
+  TMolhoDecorator = class(TDecorator)
   protected
     function ObterPreco: double; override;
     function ObterDados: string; override;
@@ -16,16 +16,16 @@ implementation
 
 { TBaconDecorator }
 
-function TOnionDecorator.ObterDados: string;
+function TMolhoDecorator.ObterDados: string;
 begin
   Result := inherited ObterDados;
-  Result := Result + ', Onion Rings';
+  Result := Result + ', Molho Especial';
 end;
 
-function TOnionDecorator.ObterPreco: double;
+function TMolhoDecorator.ObterPreco: double;
 begin
   Result := inherited ObterPreco;
-  Result := Result + 2;
+  Result := Result + 1.5;
 end;
 
 end.

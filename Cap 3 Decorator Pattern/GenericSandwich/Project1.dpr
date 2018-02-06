@@ -10,21 +10,24 @@ uses
   Decorator in 'Decorator.pas',
   DecoratorBacon in 'DecoratorBacon.pas',
   DecoratorOnion in 'DecoratorOnion.pas',
-  DecoratorQueijo in 'DecoratorQueijo.pas';
+  DecoratorQueijo in 'DecoratorQueijo.pas',
+  DecoratorMolhoEspecial in 'DecoratorMolhoEspecial.pas',
+  DecoratorHamburger in 'DecoratorHamburger.pas';
 
 var
   Sanduiche: ISanduiche;
+
 begin
-  Sanduiche := TSanduiche.Create;
+  Sanduiche := TPaoPadrao.Create;
   try
-  
+    Sanduiche := THamburgerDecorator.Create(Sanduiche);
     Sanduiche := TOnionDecorator.Create(Sanduiche);
     Sanduiche := TBaconDecorator.Create(Sanduiche);
-    Sanduiche := TBaconDecorator.Create(Sanduiche);
     Sanduiche := TQueijoDecorator.Create(Sanduiche);
-    Writeln(Sanduiche.ObterDados);
-    Writeln(FormatFloat('R$: #,##0.00',Sanduiche.ObterPreco));
-    
+    Sanduiche := TMolhoDecorator.Create(Sanduiche);
+    Writeln(Sanduiche.ObterDados + '.');
+    Writeln(FormatFloat('R$: #,##0.00', Sanduiche.ObterPreco) + '.');
+
     Readln;
   except
     on E: Exception do
