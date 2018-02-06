@@ -20,11 +20,13 @@ var
 begin
   Sanduiche := TPaoPadrao.Create;
   try
+  try
     Sanduiche := THamburgerDecorator.Create(Sanduiche);
     Sanduiche := TOnionDecorator.Create(Sanduiche);
     Sanduiche := TBaconDecorator.Create(Sanduiche);
     Sanduiche := TQueijoDecorator.Create(Sanduiche);
     Sanduiche := TMolhoDecorator.Create(Sanduiche);
+
     Writeln(Sanduiche.ObterDados + '.');
     Writeln(FormatFloat('R$: #,##0.00', Sanduiche.ObterPreco) + '.');
 
@@ -32,6 +34,9 @@ begin
   except
     on E: Exception do
       Writeln(E.ClassName, ': ', E.Message);
+  end;
+  finally
+    ReportMemoryLeaksOnShutdown := True;
   end;
 
 end.

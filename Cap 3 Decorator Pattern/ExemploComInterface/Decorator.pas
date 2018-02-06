@@ -24,7 +24,7 @@ begin
   Self.Sanduiche := Sanduiche;
 end;
 
-function TDecorator.ObterDados: string;
+function TDecorator.ObterDados  : string;
 begin
   Result := Sanduiche.ObterDados;
 end;
