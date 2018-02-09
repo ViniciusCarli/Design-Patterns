@@ -18,14 +18,12 @@ implementation
 
 function TQueijoDecorator.ObterDados: string;
 begin
-  Result := inherited ObterDados;
-  Result := Result + ', Queijo';
+  Result := inherited + ', Queijo';
 end;
 
 function TQueijoDecorator.ObterPreco: double;
 begin
-  Result := inherited ObterPreco;
-  Result := Result + 1.5;
+  Result := inherited + 1.5;
 end;
 
 end.

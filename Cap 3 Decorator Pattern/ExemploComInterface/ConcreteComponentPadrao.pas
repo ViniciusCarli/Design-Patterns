@@ -1,4 +1,4 @@
-unit ConcreteComponent;
+unit ConcreteComponentPadrao;
 
 interface
 

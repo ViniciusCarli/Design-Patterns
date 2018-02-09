@@ -18,14 +18,12 @@ implementation
 
 function TOnionDecorator.ObterDados: string;
 begin
-  Result := inherited ObterDados;
-  Result := Result + ', Onion Rings';
+  Result := inherited + ', Onion Rings';
 end;
 
 function TOnionDecorator.ObterPreco: double;
 begin
-  Result := inherited ObterPreco;
-  Result := Result + 2;
+  Result := inherited + 2;
 end;
 
 end.

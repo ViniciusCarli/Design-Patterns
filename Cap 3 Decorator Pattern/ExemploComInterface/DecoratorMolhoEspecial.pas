@@ -18,14 +18,12 @@ implementation
 
 function TMolhoDecorator.ObterDados: string;
 begin
-  Result := inherited ObterDados;
-  Result := Result + ', Molho Especial';
+  Result := inherited + ', Molho Especial';
 end;
 
 function TMolhoDecorator.ObterPreco: double;
 begin
-  Result := inherited ObterPreco;
-  Result := Result + 1.5;
+  Result := inherited + 1.5;
 end;
 
 end.

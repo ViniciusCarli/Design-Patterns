@@ -18,14 +18,12 @@ implementation
 
 function THamburgerDecorator.ObterDados: string;
 begin
-  Result := inherited ObterDados;
-  Result := Result + ', Hamburger';
+  Result := inherited + ', Hamburger';
 end;
 
 function THamburgerDecorator.ObterPreco: double;
 begin
-  Result := inherited ObterPreco;
-  Result := Result + 3;
+  Result := inherited + 3;
 end;
 
 end.

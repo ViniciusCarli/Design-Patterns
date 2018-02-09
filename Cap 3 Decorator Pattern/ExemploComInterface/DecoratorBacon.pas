@@ -18,14 +18,12 @@ implementation
 
 function TBaconDecorator.ObterDados: string;
 begin
-  Result := inherited ObterDados;
-  Result := Result + ', Bacon';
+  Result := inherited + ', Bacon';
 end;
 
 function TBaconDecorator.ObterPreco: double;
 begin
-  Result := inherited ObterPreco;
-  Result := Result + 2.5;
+  Result := inherited + 2.5;
 end;
 
 end.

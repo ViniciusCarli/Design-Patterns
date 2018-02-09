@@ -83,13 +83,14 @@
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
         <DCCReference Include="Component.pas"/>
-        <DCCReference Include="ConcreteComponent.pas"/>
+        <DCCReference Include="ConcreteComponentPadrao.pas"/>
         <DCCReference Include="Decorator.pas"/>
         <DCCReference Include="DecoratorBacon.pas"/>
         <DCCReference Include="DecoratorOnion.pas"/>
         <DCCReference Include="DecoratorQueijo.pas"/>
         <DCCReference Include="DecoratorMolhoEspecial.pas"/>
         <DCCReference Include="DecoratorHamburger.pas"/>
+        <DCCReference Include="ConcreteComponentAustraliano.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
