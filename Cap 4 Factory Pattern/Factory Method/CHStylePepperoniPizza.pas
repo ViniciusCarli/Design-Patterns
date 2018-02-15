@@ -8,7 +8,7 @@ uses
 implementation
 type
   TCHStylePepperoniPizza = class(TCHPizzaStore)
-    Result = ('Pizza With Chicago Style Pepperoni')
+//    Result = ('Pizza With Chicago Style Pepperoni')
   end;
 
 end.

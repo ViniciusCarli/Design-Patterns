@@ -5,8 +5,8 @@ interface
 uses
   PizzaStore;
 type
-  TNYPizzaStore = class(TInterfacedObject, IPizzaStore)
-    function createPizza(): String;
+  TNYPizzaStore = class(FPizzaStore)
+    function createPizza(PizzaType : string) : string;
   end;
 
 
@@ -14,9 +14,9 @@ implementation
 
 { TNYPizzaStore }
 
-function TNYPizzaStore.createPizza: String;
+function TNYPizzaStore.createPizza(PizzaType : string) : string;
 begin
-  Result = ('NYPizza');
+  Result := ('NYPizza');
 end;
 
 end.

@@ -3,20 +3,23 @@ unit PizzaFactory;
 interface
 
 uses
-  PizzaStore;
+  PizzaStore, NYPizzaStore;
 
 type
-  TPizzaFactory = class(TInterfacedObject,IPizzaStore)
-    function CheckPizza():string;
+  TTipoPizza = (NyPizza,ChPizza);
+  TPizzaFactory = class
+    class function CheckPizza(Tipo : TTipoPizza):string;
   end;
 
 implementation
 
 { TPizzaFactory }
 
-function TPizzaFactory.CheckPizza: string;
+function TPizzaFactory.CheckPizza(Tipo : TTipoPizza):string;
 begin
-
+  case Tipo of
+      NyPizza: Result := TNYPizzaStore.Create;
+  end;
 end;
 
 end.

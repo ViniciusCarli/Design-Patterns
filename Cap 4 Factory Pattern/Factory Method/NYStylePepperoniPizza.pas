@@ -8,7 +8,7 @@ uses
 implementation
 type
   TNYStylePepperoniPizza = class(TNYPizzaStore)
-    Result = ('Pizza With NY Style Pepperoni')
+//    Result = ('Pizza With NY Style Pepperoni')
   end;
 
 end.
