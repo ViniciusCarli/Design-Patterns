@@ -16,7 +16,7 @@ var
 begin
 Pizza := TPizzaFactory.Create;
   try
-    Writeln(Pizza.CriarPizza(tpNYStore).FPizza);
+    Writeln(Pizza.CriarPizza(tpNYStore).Stores);
     Readln;
   except
     on E: Exception do

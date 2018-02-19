@@ -7,12 +7,12 @@ uses
 
 type
   TNYPizzaStore = class(TPizza)
-    function FPizza: string; override;
+    function Stores: string; override;
   end;
 
 implementation
 
-function TNYPizzaStore.FPizza: string;
+function TNYPizzaStore.Stores: string;
 begin
   Result := 'NYStore';
 end;
