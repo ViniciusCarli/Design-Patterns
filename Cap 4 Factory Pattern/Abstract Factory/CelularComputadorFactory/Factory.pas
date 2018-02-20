@@ -3,28 +3,49 @@ unit Factory;
 interface
 
 uses
-  Interfaces, Celulares, Computadores;
+  Interfaces, Celulares, Computadores, Marcas;
 
-implementation
 type
-  TOpcao = (Redmi,Galaxy);
+  TOpcao = (opXiaomi,opSamsung);
 
-  TProdFactory =class
+  TProdFactory = class
     procedure MostrarProdutos(const AOpcao :TOpcao);
   end;
+var
+    Marca : IFactoryMarca;
+
+implementation
+
 
 procedure MostrarProdutos(const AOpcao :TOpcao);
 var
   Marca: IFactoryMarca;
-  Celular: ICelular;
-  Computador: IComputador;
+  Samsung: TSamsung;
+  Xiaomi: TXiaomi;
 begin
   case AOpcao of
-    Redmi:
-    Marca := TRedmi.Create;
-    Galaxy:
-    Marca := TGalaxy.Create;
+    opXiaomi:
+      Marca := Xiaomi.Create;
+    opSamsung:
+      Marca := Samsung.Create;
   end;
+end;
+
+{ TProdFactory }
+
+procedure TProdFactory.MostrarProdutos(const AOpcao: TOpcao);
+var
+  Celular : ICelular;
+  Computador : IComputador;
+begin
+  Celular := Marca.ConsultarCelular;
+  Computador := Marca.ConsultarComputador;
+
+  Writeln(Celular.TamanhoDaTela);
+  Writeln(Celular.MemoriaRAM);
+
+  Writeln(Computador.NomeProcessador);
+  Writeln(Computador.Armazenamento);
 end;
 
 end.

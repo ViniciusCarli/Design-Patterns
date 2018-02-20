@@ -2,27 +2,30 @@ unit Samsung;
 
 interface
 
-uses
-  Interfaces, Computadores, Celulares;
+//uses
+//  Interfaces;
+//
+//type
+//  TSamsung = class(TInterfacedObject, IFactoryMarca)
+//    function ConsultarCelular : ICelular;
+//    function ConsultarComputador : IComputador;
+//  end;
 
 implementation
 
-type
-  TSamsung = class(TInterfacedObject, IFactoryMarca)
-    function ConsultarCelular : ICelular;
-    function ConsultarComputador : IComputador;
-  end;
+//uses
+//  Computadores, Celulares;
+//
+//{ TSamsung }
+//
+//function TSamsung.ConsultarCelular: ICelular;
+//begin
+////  Result := TGalaxy.Create;
+//end;
 
-{ TSamsung }
-
-function TSamsung.ConsultarCelular: ICelular;
-begin
-  Result := TGalaxy.Create;
-end;
-
-function TSamsung.ConsultarComputador: IComputador;
-begin
-  Result := TAllinOne.Create;
-end;
+//function TSamsung.ConsultarComputador: IComputador;
+//begin
+//  Result := TAllinOne.Create;
+//end;
 
 end.

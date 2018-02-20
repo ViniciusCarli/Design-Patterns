@@ -2,14 +2,15 @@ unit Interfaces;
 
 interface
 
-implementation
 type
   ICelular = interface
+    function NomeCelular : string;
     function TamanhoDaTela : string;
     function MemoriaRAM : string;
   end;
 
   IComputador = interface
+    function NomeComputador : string;
     function NomeProcessador : string;
     function Armazenamento : string;
   end;
@@ -18,5 +19,7 @@ type
     function ConsultarCelular : ICelular;
     function ConsultarComputador : IComputador;
   end;
+
+implementation
 
 end.
