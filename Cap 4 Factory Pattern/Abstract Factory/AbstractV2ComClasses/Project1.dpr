@@ -6,38 +6,44 @@ program Project1;
 
 uses
   System.SysUtils,
-  Interfaces in 'Interfaces.pas',
-  Computadores in 'Computadores.pas',
+  Celular in 'Celular.pas',
+  Computador in 'Computador.pas',
+  FactoryMarca in 'FactoryMarca.pas',
   Celulares in 'Celulares.pas',
+  Computadores in 'Computadores.pas',
   Marcas in 'Marcas.pas';
-
 var
-  Celular : ICelular;
-  Computador : IComputador;
-  Marca : IFactoryMarca;
+  Celular : TCelular;
+  Computador : TComputador;
+  Marca : TFactoryMarca;
 begin
-    Marca := TXiaomi.Create;
-//    Marca := TSamsung.Create;
-    Computador := Marca.ConsultarComputador;
+  Marca := nil;
+  Celular := nil;
+  Computador := nil;
+try
+    Marca := TSamsung.Create;
     Celular := Marca.ConsultarCelular;
+    Computador := Marca.ConsultarComputador;
   try
     Celular.NomeCelular;
     Celular.TamanhoDaTela;
     Celular.MemoriaRAM;
 
     Writeln('');
-//    No caso de trocar de para um computador no meio da operação.
-//    Marca := TXiaomi.Create;
-//    Marca := TSamsung.Create;
-      Computador := Marca.ConsultarComputador;
 
     Computador.NomeComputador;
     Computador.NomeProcessador;
     Computador.Armazenamento;
-    Readln;
 
+    Readln;
   except
     on E: Exception do
       Writeln(E.ClassName, ': ', E.Message);
   end;
+finally
+  Marca.Free;
+  Celular.Free;
+  Computador.Free;
+end;
+  ReportMemoryLeaksOnShutdown := True;
 end.

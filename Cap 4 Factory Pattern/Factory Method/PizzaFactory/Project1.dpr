@@ -12,9 +12,9 @@ uses
   PizzaFactory in 'PizzaFactory.pas';
 
 var
-    Pizza : TPizzaFactory;
+  Pizza : TPizzaFactory;
 begin
-Pizza := TPizzaFactory.Create;
+  Pizza := TPizzaFactory.Create;
   try
     Writeln(Pizza.CriarPizza(tpNYStore).Stores);
     Readln;
