@@ -45,17 +45,38 @@ begin
   begin
     Factory := TReaderFactory.Create(FDados);
     try
+      FDados.cds.Close;
       Reader := Factory.CriarReader(tpCsvReader);
-      try
-        Reader.ShowOnGrid;
-      finally
-        Reader.Free;
-      end;
+      Reader.ShowOnGrid;
     finally
+      Reader.Free;
       Factory.Free;
     end;
   end;
-//  if RadioGroup1.ItemIndex = 1 then
+  if RadioGroup1.ItemIndex = 1 then
+  begin
+    Factory := TReaderFactory.Create(FDados);
+    try
+      FDados.cds.Close;
+      Reader := Factory.CriarReader(tpXmlReader);
+      Reader.ShowOnGrid;
+    finally
+      Reader.Free;
+      Factory.Free;
+    end;
+  end;
+  if RadioGroup1.ItemIndex = 2 then
+  begin
+    Factory := TReaderFactory.Create(FDados);
+    try
+      FDados.cds.Close;
+      Reader := Factory.CriarReader(tpJsonReader);
+      Reader.ShowOnGrid;
+    finally
+      Reader.Free;
+      Factory.Free;
+    end;
+  end;
 
 end;
 

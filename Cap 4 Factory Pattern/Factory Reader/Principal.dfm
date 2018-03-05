@@ -100,11 +100,11 @@ object Form1: TForm1
       end>
   end
   object OpenDialog1: TOpenDialog
-    Left = 592
-    Top = 120
+    Left = 584
+    Top = 32
   end
   object DataSource1: TDataSource
     Left = 584
-    Top = 232
+    Top = 88
   end
 end
