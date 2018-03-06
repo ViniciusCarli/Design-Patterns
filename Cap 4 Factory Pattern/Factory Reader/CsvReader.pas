@@ -27,7 +27,7 @@ begin
     ListaItens := TStringList.Create;
     ListaDados := TStringList.Create;
 
-    ListaItens.LoadFromFile('C:\Users\Vinicius Bustamanti\Desktop\Data\data.csv');
+    ListaItens.LoadFromFile('C:\Users\Vinicius Bustamanti\Desktop\Design-Patterns\Cap 4 Factory Pattern\Factory Reader\Data\data.csv');
     FDados.cds.CreateDataSet;
 
     for y := 1 to Pred(ListaItens.Count) do

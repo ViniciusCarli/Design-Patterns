@@ -24,7 +24,7 @@ begin
   ListaJSON := nil;
   try
     ListaJSON := TJSONObject.ParseJSONValue(TEncoding.ASCII.GetBytes(TFile.ReadAllText
-    ('C:\Users\Vinicius Bustamanti\Desktop\Data\data.json')), 0) as TJSONArray;
+    ('C:\Users\Vinicius Bustamanti\Desktop\Design-Patterns\Cap 4 Factory Pattern\Factory Reader\Data\data.json')), 0) as TJSONArray;
 
     FDados.cds.CreateDataSet;
     for ValorJSON in ListaJSON do

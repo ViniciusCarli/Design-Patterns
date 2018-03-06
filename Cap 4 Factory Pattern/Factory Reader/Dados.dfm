@@ -32,4 +32,8 @@ object DmDados: TDmDados
       Size = 45
     end
   end
+  object XMLDocument1: TXMLDocument
+    Left = 128
+    Top = 72
+  end
 end

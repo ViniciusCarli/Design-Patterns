@@ -53,6 +53,7 @@ begin
       Factory.Free;
     end;
   end;
+
   if RadioGroup1.ItemIndex = 1 then
   begin
     Factory := TReaderFactory.Create(FDados);
@@ -65,6 +66,7 @@ begin
       Factory.Free;
     end;
   end;
+
   if RadioGroup1.ItemIndex = 2 then
   begin
     Factory := TReaderFactory.Create(FDados);

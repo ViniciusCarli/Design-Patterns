@@ -3,7 +3,8 @@ unit Dados;
 interface
 
 uses
-  System.SysUtils, System.Classes, Data.DB, Datasnap.DBClient;
+  System.SysUtils, System.Classes, Data.DB, Datasnap.DBClient, Xml.xmldom,
+  Xml.XMLIntf, Xml.XMLDoc;
 
 type
   TDmDados = class(TDataModule)
@@ -14,6 +15,7 @@ type
     cdsemail: TStringField;
     cdsgender: TStringField;
     cdsip_address: TStringField;
+    XMLDocument1: TXMLDocument;
   private
     { Private declarations }
   public
