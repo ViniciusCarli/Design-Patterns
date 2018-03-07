@@ -13,7 +13,6 @@ type
     EdtArquivoOriginal: TEdit;
     SpeedButton1: TSpeedButton;
     btnLerArquivo: TBitBtn;
-    RadioGroup1: TRadioGroup;
     OpenDialog1: TOpenDialog;
     DBGrid2: TDBGrid;
     DataSource1: TDataSource;
@@ -41,7 +40,7 @@ procedure TForm1.btnLerArquivoClick(Sender: TObject);
 var
   Reader: TBBReader;
 begin
-  if RadioGroup1.ItemIndex = 0 then
+  if ExtractFileExt(EdtArquivoOriginal.Text) = '.csv' then
   begin
     Factory := TReaderFactory.Create(FDados);
     try
@@ -54,7 +53,7 @@ begin
     end;
   end;
 
-  if RadioGroup1.ItemIndex = 1 then
+  if ExtractFileExt(EdtArquivoOriginal.Text) = '.xml' then
   begin
     Factory := TReaderFactory.Create(FDados);
     try
@@ -67,7 +66,7 @@ begin
     end;
   end;
 
-  if RadioGroup1.ItemIndex = 2 then
+  if ExtractFileExt(EdtArquivoOriginal.Text) = '.json' then
   begin
     Factory := TReaderFactory.Create(FDados);
     try

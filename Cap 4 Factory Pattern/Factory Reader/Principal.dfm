@@ -37,18 +37,6 @@ object Form1: TForm1
     TabOrder = 1
     OnClick = btnLerArquivoClick
   end
-  object RadioGroup1: TRadioGroup
-    Left = 458
-    Top = -1
-    Width = 90
-    Height = 67
-    Caption = 'Tipo de Arquivo'
-    Items.Strings = (
-      'csv'
-      'xml'
-      'json')
-    TabOrder = 2
-  end
   object DBGrid2: TDBGrid
     Left = 0
     Top = 64
@@ -56,7 +44,7 @@ object Form1: TForm1
     Height = 235
     Align = alBottom
     DataSource = DataSource1
-    TabOrder = 3
+    TabOrder = 2
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
