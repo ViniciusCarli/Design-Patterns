@@ -7,7 +7,7 @@ uses
 type
   LightOnCommand = class(TInterfacedObject, ICommand)
     public
-      constructor Create;
+      constructor Create(Light: TLight);
       procedure Execute;
       procedure Undo;
     private
@@ -15,7 +15,7 @@ type
   end;
   LightOffCommand = class(TInterfacedObject, ICommand)
     public
-      constructor Create;
+      constructor Create(Light: TLight);
       procedure Execute;
       procedure Undo;
     private
@@ -26,9 +26,9 @@ implementation
 
 { LightOnCommand }
 
-constructor LightOnCommand.Create;
+constructor LightOnCommand.Create(Light: TLight);
 begin
-  Self.Light := TLight;
+  Self.Light := Light;
 end;
 
 procedure LightOnCommand.Execute;
@@ -43,9 +43,9 @@ end;
 
 { LightOffCommand }
 
-constructor LightOffCommand.Create;
+constructor LightOffCommand.Create(Light: TLight);
 begin
-  Self.Light := TLight;
+  Self.Light := Light;
 end;
 
 procedure LightOffCommand.Execute;
