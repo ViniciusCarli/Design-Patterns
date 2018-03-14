@@ -12,17 +12,18 @@ uses
   Invoker in 'Invoker.pas',
   Controller in 'Controller.pas',
   LED in 'LED.pas',
-  LEDCommand in 'LEDCommand.pas';
+  LEDCommand in 'LEDCommand.pas',
+  NoCommand in 'NoCommand.pas';
 
 var
   Invoker : TInvoker;
   Light : TLight;
   LED : TLED;
-  LEDAzul : TLEDAzul;
-  LEDVerm : TLEDVermelho;
-  LEDRoxo : TLEDRoxo;
-  LEDVerde : TLEDVerde;
-  LEDOff : TLEDOff;
+  LEDAzul : TBlueLED;
+  LEDVerm : TRedLED;
+  LEDRoxo : TPurpleLED;
+  LEDVerde : TGreenLED;
+  LEDOff : TOffLED;
   LightOn : LightOnCommand;
   LighOff : LightOffCommand;
 
@@ -32,26 +33,28 @@ begin
   LED := TLED.Create;
   LightOn := LightOnCommand.Create(Light);
   LighOff := LightOffCommand.Create(Light);
-  LEDAzul := LEDCommand.TLEDAzul.Create(LED);
-  LEDVerm := LEDCommand.TLEDVermelho.Create(LED);
-  LEDRoxo := LEDCommand.TLEDRoxo.Create(LED);
-  LEDVerde := LEDCommand.TLEDVerde.Create(LED);
+
+  LEDAzul := LEDAzul.Create(LED);
+  LEDVerm := LEDVerm.Create(LED);
+  LEDRoxo := LEDRoxo.Create(LED);
+  LEDVerde := LEDVerde.Create(LED);
   try
   try
-    LED.CriarTList;
+//    LED.CriarTList;
     Invoker.SetCommand(0, LightOn, LighOff);
     Invoker.SetCommand(1, LEDAzul, LEDOff);
-    Invoker.SetCommand(2, LEDVerm, LEDOff);
+    Invoker.SetCommand(2, LEDVerde, LEDOff);
     Invoker.SetCommand(3, LEDRoxo, LEDOff);
-    Invoker.SetCommand(4, LEDVerde, LEDOff);
+    Invoker.SetCommand(4, LEDVerm, LEDOff);
 
-    Invoker.OnButton(0);
-    Invoker.OnButton(1);
-    Invoker.OnButton(2);
-    Invoker.OnButton(3);
-    Invoker.OnButton(4);
-
+//    Invoker.OnButton(0);
+//    Invoker.OnButton(1);
     Invoker.UndoButton;
+    Invoker.OnButton(4);
+    Invoker.OnButton(3);
+    Invoker.UndoButton;
+//    Invoker.OnButton(4);
+
 
   finally
     Readln;
