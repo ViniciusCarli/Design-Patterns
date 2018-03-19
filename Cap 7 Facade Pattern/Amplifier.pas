@@ -10,7 +10,7 @@ type
     procedure SetStereoSound;
     procedure SetSurroundSound;
     procedure SetTuner;
-    procedure SetVolume(vol : integer);
+    procedure SetVolume(vol : string);
   end;
 
 implementation
@@ -29,12 +29,12 @@ end;
 
 procedure TAmplifier.SetCD;
 begin
-  Writeln('CD Escolhido:' + Cd);
+  Writeln('CD Escolhido: ' + Cd);
 end;
 
 procedure TAmplifier.SetDVD;
 begin
-  Writeln('DVD Escolhido' + Dvd);
+  Writeln('DVD Escolhido: ' + Dvd);
 end;
 
 procedure TAmplifier.SetStereoSound;
@@ -54,7 +54,7 @@ end;
 
 procedure TAmplifier.SetVolume;
 begin
-  Writeln('Volume :' + vol);
+  Writeln('Volume : ' + vol);
 end;
 
 end.
