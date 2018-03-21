@@ -7,11 +7,10 @@ uses
 
 type
   TRealSubject = class(TInterfacedObject, IReceberDados)
-    produto,preco,quant : string;
+    produto,preco : string;
     procedure ReceberProduto(Aproduto : string);
     procedure ReceberPreco(Apreco : string);
-    procedure ReceberQuantidade(Aquant : string);
-    procedure Create (produto,preco,quant : string);
+    procedure Create (produto,preco : string);
     procedure PrecoTotal;
   end;
 implementation
@@ -22,22 +21,18 @@ procedure TRealSubject.Create(produto: string);
 begin
   Self.produto := produto;
   Self.preco := preco;
-  Self.quant := quant;
 end;
 
 procedure TRealSubject.ReceberPreco;
 begin
-  Writeln('')
+  preco := Apreco;
+  Writeln('Preço: ' + preco);
 end;
 
 procedure TRealSubject.ReceberProduto;
 begin
-
-end;
-
-procedure TRealSubject.ReceberQuantidade;
-begin
-
+  produto := Aproduto;
+  Writeln('Produto escolhido:' + produto);
 end;
 
 end.

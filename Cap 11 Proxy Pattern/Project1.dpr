@@ -7,7 +7,8 @@ program Project1;
 uses
   System.SysUtils,
   Subject in 'Subject.pas',
-  RealSubject in 'RealSubject.pas';
+  RealSubject in 'RealSubject.pas',
+  Unit1 in 'Unit1.pas';
 
 begin
   try
