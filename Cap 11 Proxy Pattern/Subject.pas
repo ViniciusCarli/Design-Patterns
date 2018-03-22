@@ -3,8 +3,8 @@ unit Subject;
 interface
 type
   IReceberDados = interface
-    procedure ReceberProduto(Aproduto : string);
-    procedure ReceberPreco(Apreco : string);
+    procedure ReceberProduto(produto : string);
+    procedure ReceberPreco(preco : string);
 end;
 
 implementation
