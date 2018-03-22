@@ -84,7 +84,7 @@
         </DelphiCompile>
         <DCCReference Include="Subject.pas"/>
         <DCCReference Include="RealSubject.pas"/>
-        <DCCReference Include="Unit1.pas"/>
+        <DCCReference Include="Proxy.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
