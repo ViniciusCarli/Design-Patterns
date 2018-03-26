@@ -4,12 +4,12 @@ object ServerMethods1: TServerMethods1
   Width = 332
   object FDGUIxWaitCursor1: TFDGUIxWaitCursor
     Provider = 'Forms'
-    Left = 88
-    Top = 56
+    Left = 56
+    Top = 96
   end
   object FDPhysMySQLDriverLink1: TFDPhysMySQLDriverLink
-    Left = 168
-    Top = 8
+    Left = 56
+    Top = 32
   end
   object FDConnection1: TFDConnection
     Params.Strings = (
@@ -19,12 +19,21 @@ object ServerMethods1: TServerMethods1
       'Server=localhost'
       'ExtendedMetadata=True'
       'DriverID=PG')
-    Left = 192
-    Top = 80
+    Connected = True
+    LoginPrompt = False
+    Left = 248
+    Top = 64
   end
-  object FDQuery1: TFDQuery
+  object qryProduto: TFDQuery
     Connection = FDConnection1
-    Left = 272
-    Top = 72
+    SQL.Strings = (
+      'select * from cliente;')
+    Left = 240
+    Top = 112
+  end
+  object dspProduto: TDataSetProvider
+    DataSet = qryProduto
+    Left = 240
+    Top = 168
   end
 end
