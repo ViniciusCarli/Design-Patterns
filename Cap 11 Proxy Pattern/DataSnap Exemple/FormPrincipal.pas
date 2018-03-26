@@ -31,17 +31,18 @@ uses
 procedure TForm1.btnIniciarClick(Sender: TObject);
 begin
   if btnIniciar.Caption = 'Iniciar' then
-  begin
-    ServerContainer1.DSTCPServerTransport1.Port := StrToInt(edtPort.Text);
-    ServerContainer1.DSServer1.Start;
-    if ServerContainer1.DSServer1.Started then
-      btnIniciar.Caption := 'Parar';
-  end
-else
-
-ServerContainer1.DSServer1.Stop;
-if not ServerContainer1.DSServer1.Started then
-  btnIniciar.Caption := 'Iniciar';
+    begin
+     ServerContainer1.DSTCPServerTransport1.Port := StrToInt(edtPort.Text);
+     ServerContainer1.DSServer1.Start;
+      if ServerContainer1.DSServer1.Started then
+        btnIniciar.Caption := 'Parar';
+    end
+  else
+begin
+  ServerContainer1.DSServer1.Stop;
+    if not ServerContainer1.DSServer1.Started then
+      btnIniciar.Caption := 'Iniciar';
+end;
 end;
 
 end.

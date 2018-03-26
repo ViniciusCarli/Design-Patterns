@@ -5,7 +5,9 @@ interface
 uses System.SysUtils, System.Classes,
   Datasnap.DSTCPServerTransport,
   Datasnap.DSServer, Datasnap.DSCommonServer,
-  Datasnap.DSAuth, IPPeerServer;
+  Datasnap.DSAuth, IPPeerServer, Datasnap.DSHTTP,
+  Datasnap.DSHTTPServiceProxyDispatcher, Datasnap.DSClientMetadata,
+  Datasnap.DSMetadata, Datasnap.DSServerMetadata;
 
 type
   TServerContainer1 = class(TDataModule)
@@ -60,7 +62,6 @@ begin
     for particular server methods. }
   valid := True;
 end;
-
 
 end.
 

@@ -9,14 +9,15 @@ uses System.SysUtils, System.Classes, System.Json,
   FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.Phys.PG,
   FireDAC.Phys.PGDef, FireDAC.Stan.Param, FireDAC.DatS, FireDAC.DApt.Intf,
   FireDAC.DApt, Data.DB, FireDAC.Comp.DataSet, FireDAC.Comp.Client,
-  FireDAC.Phys.MySQL, FireDAC.Comp.UI;
+  FireDAC.Phys.MySQL, FireDAC.Comp.UI, Datasnap.Provider;
 
 type
   TServerMethods1 = class(TDSServerModule)
     FDGUIxWaitCursor1: TFDGUIxWaitCursor;
     FDPhysMySQLDriverLink1: TFDPhysMySQLDriverLink;
     FDConnection1: TFDConnection;
-    FDQuery1: TFDQuery;
+    qryProduto: TFDQuery;
+    dspProduto: TDataSetProvider;
   private
     { Private declarations }
   public
