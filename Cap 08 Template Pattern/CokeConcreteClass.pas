@@ -1,4 +1,4 @@
-unit CokeBeverage;
+unit CokeConcreteClass;
 
 interface
 type
@@ -7,13 +7,12 @@ type
       procedure PrepareSoda;
       procedure putSyrup;
       procedure Gasify;
-    protected
       procedure Mix; virtual; abstract;
       procedure addExtra; virtual; abstract;
   end;
 implementation
 
-{ TCaffeineBeverage }
+{ TCokeBeverage }
 
 procedure TCokeBeverage.Gasify;
 begin
@@ -27,7 +26,6 @@ end;
 
 procedure TCokeBeverage.PrepareSoda;
 begin
-  PrepareSoda;
   putSyrup;
   Gasify;
   Mix;
