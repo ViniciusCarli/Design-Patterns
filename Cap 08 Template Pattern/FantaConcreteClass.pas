@@ -16,7 +16,7 @@ implementation
 
 procedure TFantaBeverage.Gasify;
 begin
-  Writeln('boiling watter');
+  Writeln('Lot of Gaz');
 end;
 
 procedure TFantaBeverage.putSyrup;
