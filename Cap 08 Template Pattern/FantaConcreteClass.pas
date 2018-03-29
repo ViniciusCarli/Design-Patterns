@@ -1,33 +1,31 @@
-unit FantaBeverage;
+unit FantaConcreteClass;
 
 interface
 type
-  TCokeBeverage = class
+  TFantaBeverage = class
     public
       procedure PrepareSoda;
       procedure putSyrup;
       procedure Gasify;
-    protected
       procedure Mix; virtual; abstract;
       procedure addExtra; virtual; abstract;
   end;
 implementation
 
-{ TCaffeineBeverage }
+{ TFantaBeverage }
 
-procedure TCokeBeverage.Gasify;
+procedure TFantaBeverage.Gasify;
 begin
   Writeln('boiling watter');
 end;
 
-procedure TCokeBeverage.putSyrup;
+procedure TFantaBeverage.putSyrup;
 begin
   Writeln('Orange Syrup');
 end;
 
-procedure TCokeBeverage.PrepareSoda;
+procedure TFantaBeverage.PrepareSoda;
 begin
-  PrepareSoda;
   putSyrup;
   Gasify;
   Mix;
