@@ -5,7 +5,7 @@ interface
 type
   IImplementor = interface(IInterface)
     procedure Nome;
-    procedure Ingredients;       a
+    procedure Ingredients;
     procedure Adicionais;
   end;
 
