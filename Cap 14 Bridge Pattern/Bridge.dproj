@@ -101,7 +101,8 @@
         <DCCReference Include="InterfaceImp.pas"/>
         <DCCReference Include="RecursoBurger.pas"/>
         <DCCReference Include="Burger.pas"/>
-        <DCCReference Include="..\Cap 14 Bridge Pattern\PonteUsuario.pas"/>
+        <DCCReference Include="PonteAbstract.pas"/>
+        <DCCReference Include="PonteUsuario.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

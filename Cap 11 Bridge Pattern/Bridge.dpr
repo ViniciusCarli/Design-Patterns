@@ -8,7 +8,8 @@ uses
   System.SysUtils,
   InterfaceImp in 'InterfaceImp.pas',
   RecursoBurger in 'RecursoBurger.pas',
-  Burger in 'Burger.pas';
+  Burger in 'Burger.pas',
+  PonteUsuario in '..\Cap 14 Bridge Pattern\PonteUsuario.pas';
 
 begin
   try
