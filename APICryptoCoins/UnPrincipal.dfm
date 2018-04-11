@@ -1,6 +1,7 @@
 object Form1: TForm1
   Left = 0
   Top = 0
+  BorderIcons = [biSystemMenu]
   Caption = 'Form1'
   ClientHeight = 167
   ClientWidth = 251
@@ -43,7 +44,7 @@ object Form1: TForm1
   end
   object Label5: TLabel
     Left = 8
-    Top = 21
+    Top = 22
     Width = 61
     Height = 13
     Caption = 'CryptoCoin :'

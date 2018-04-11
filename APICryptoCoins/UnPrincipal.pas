@@ -40,22 +40,22 @@ uses
 
 procedure TForm1.Button1Click(Sender: TObject);
 var
-  UmAPIviacep : TAPIViacep;
+  APICoinCap : TAPICoinCap;
 begin
    try
-      UmAPIviacep := TAPIViacep.Create(edtCep.Text);
-      if (UmAPIviacep.GetRespCode = 200 ) then
+      APICoinCap := TAPICoinCap.Create(edtCep.Text);
+      if (APICoinCap.GetRespCode = 200 ) then
       begin
-        edtName.Text := UmAPIviacep.GetName;
-        edtSymbol.Text := UmAPIviacep.GetSymbol;
-        edtRank.Text := UmAPIviacep.GetRank;
-        edtPriceUSD.Text := UmAPIviacep.GetPriceUSD;
-        edtPriceBTC.Text := UmAPIviacep.GetPriceBTC;
+        edtName.Text := APICoinCap.GetName;
+        edtSymbol.Text := APICoinCap.GetSymbol;
+        edtRank.Text := APICoinCap.GetRank;
+        edtPriceUSD.Text := APICoinCap.GetPriceUSD;
+        edtPriceBTC.Text := APICoinCap.GetPriceBTC;
       end
-      else if (UmAPIviacep.GetRespCode = 400) then
+      else if (APICoinCap.GetRespCode = 400) then
         showMessage('CryptoCoin Not Found');
    finally
-     FreeAndNil(UmAPIviacep);
+     FreeAndNil(APICoinCap);
    end;
 end;
 
