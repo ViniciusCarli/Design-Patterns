@@ -36,6 +36,7 @@ begin
   AddItem('Big World','BNNY RBBT',0002311,1.99);
   AddItem('I Hate Love','BNNY RBBT',0003211,0.89);
   AddItem('Waterfalls Down','BNNY RBBT',0003211,0.89);
+
 end;
 
 function TMusicMenu.CreateIterator: TMusicAlbumIterator;
